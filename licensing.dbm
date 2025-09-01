@@ -3,8 +3,8 @@
 CAUTION: Do not modify this file unless you know what you are doing.
  Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="1.1.6" use-changelog="false" max-obj-count="75"
-	 last-position="0,0" last-zoom="1" scene-rect="0,0,2573.56,5126.12"
+<dbmodel pgmodeler-ver="1.1.6" use-changelog="false" max-obj-count="124"
+	 last-position="0,0" last-zoom="1" scene-rect="0,0,3086.52,12032.5"
 	 default-schema="public" default-owner="postgres"
 	 layers="Default layer"
 	 active-layers="0"
@@ -39,39 +39,39 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <schema name="public" layers="0" rect-visible="true" fill-color="#e1e1e1" name-color="#000000" sql-disabled="true">
 </schema>
 
-<schema name="officers" layers="0" rect-visible="true" fill-color="#dc972e" name-color="#000000">
+<schema name="officers" layers="0" rect-visible="true" fill-color="#8426d9" name-color="#000000">
 	<role name="postgres"/>
 </schema>
 
-<schema name="capacities" layers="0" rect-visible="true" fill-color="#bca2f4" name-color="#000000">
+<schema name="capacities" layers="0" rect-visible="true" fill-color="#87ba03" name-color="#000000">
 	<role name="postgres"/>
 </schema>
 
-<schema name="vettings" layers="0" rect-visible="true" fill-color="#932631" name-color="#000000">
+<schema name="vettings" layers="0" rect-visible="true" fill-color="#38e6d0" name-color="#000000">
 	<role name="postgres"/>
 </schema>
 
-<schema name="attachments" layers="0" rect-visible="true" fill-color="#e5d0b5" name-color="#000000">
+<schema name="attachments" layers="0" rect-visible="true" fill-color="#988ace" name-color="#000000">
 	<role name="postgres"/>
 </schema>
 
-<schema name="common" layers="0" rect-visible="true" fill-color="#a68fe1" name-color="#000000">
+<schema name="common" layers="0" rect-visible="true" fill-color="#ea090b" name-color="#000000">
 	<role name="postgres"/>
 </schema>
 
-<schema name="references" layers="0" rect-visible="true" fill-color="#96a9ff" name-color="#000000">
+<schema name="references" layers="0" rect-visible="true" fill-color="#a7064f" name-color="#000000">
 	<role name="postgres"/>
 </schema>
 
-<schema name="daas" layers="0" rect-visible="true" fill-color="#485d95" name-color="#000000">
+<schema name="daas" layers="0" rect-visible="true" fill-color="#bd5570" name-color="#000000">
 	<role name="postgres"/>
 </schema>
 
-<schema name="droc" layers="0" rect-visible="true" fill-color="#e8ef4e" name-color="#000000">
+<schema name="droc" layers="0" rect-visible="true" fill-color="#836829" name-color="#000000">
 	<role name="postgres"/>
 </schema>
 
-<schema name="data_migration" layers="0" rect-visible="true" fill-color="#7208e5" name-color="#000000">
+<schema name="data_migration" layers="0" rect-visible="true" fill-color="#bc47b7" name-color="#000000">
 	<role name="postgres"/>
 </schema>
 
@@ -87,8 +87,8 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="person" layers="0" collapse-mode="1" max-obj-count="9" z-value="0">
 	<schema name="officers"/>
 	<role name="postgres"/>
-	<position x="60" y="60"/>
-	<column name="id" not-null="true">
+	<position x="260" y="60"/>
+	<column name="id" not-null="true" default-value="gen_random_uuid()">
 		<type name="uuid" length="0"/>
 	</column>
 	<column name="created_at">
@@ -123,7 +123,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="sfc" layers="0" collapse-mode="1" max-obj-count="9" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="1340" y="60"/>
+	<position x="60" y="1460"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -159,7 +159,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="or" layers="0" collapse-mode="1" max-obj-count="9" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="1520" y="60"/>
+	<position x="220" y="1460"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -195,7 +195,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="crb" layers="0" collapse-mode="1" max-obj-count="9" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="1700" y="60"/>
+	<position x="400" y="1460"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -231,7 +231,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="hkia" layers="0" collapse-mode="1" max-obj-count="9" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="1860" y="60"/>
+	<position x="560" y="1460"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -267,7 +267,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="mpfa" layers="0" collapse-mode="1" max-obj-count="9" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="2040" y="60"/>
+	<position x="740" y="1460"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -303,7 +303,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="overseas_regulators" layers="0" collapse-mode="1" max-obj-count="9" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="1340" y="280"/>
+	<position x="60" y="1700"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -336,58 +336,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
-<table name="attachments" layers="0" collapse-mode="1" max-obj-count="15" z-value="0">
-	<schema name="attachments"/>
-	<role name="postgres"/>
-	<position x="2440" y="60"/>
-	<column name="id" not-null="true">
-		<type name="uuid" length="0"/>
-	</column>
-	<column name="created_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="created_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="updated_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="updated_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="deleted_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="deleted_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="attachment">
-		<type name="bytea" length="0"/>
-	</column>
-	<column name="file_name">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="data">
-		<type name="bytea" length="0"/>
-	</column>
-	<column name="size">
-		<type name="integer" length="0"/>
-	</column>
-	<column name="content_type">
-		<type name="character varying" length="100"/>
-	</column>
-	<column name="description">
-		<type name="smallint" length="0"/>
-	</column>
-	<constraint name="attachments_pk" type="pk-constr" table="attachments.attachments">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
-</table>
-
 <table name="world_check" layers="0" collapse-mode="1" max-obj-count="9" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="1540" y="280"/>
+	<position x="240" y="1700"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -423,7 +375,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="eard" layers="0" collapse-mode="1" max-obj-count="9" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="1720" y="280"/>
+	<position x="420" y="1700"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -459,7 +411,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="droc" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="1900" y="280"/>
+	<position x="600" y="1700"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -501,7 +453,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="watchlist" layers="0" collapse-mode="1" max-obj-count="9" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="2080" y="280"/>
+	<position x="780" y="1700"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -537,7 +489,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="world_check_attachments" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="1340" y="520"/>
+	<position x="60" y="1940"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -576,7 +528,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="overseas_regulators_attachments" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="1580" y="520"/>
+	<position x="280" y="1940"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -615,7 +567,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="sfc_attachments" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="1860" y="520"/>
+	<position x="560" y="1940"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -654,7 +606,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="or_attachments" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="2040" y="520"/>
+	<position x="760" y="1940"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -693,7 +645,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="crb_attachments" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="2240" y="520"/>
+	<position x="940" y="1940"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -732,7 +684,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="hkia_attachments" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="1340" y="780"/>
+	<position x="60" y="2180"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -771,7 +723,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="mpfa_attachments" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
 	<schema name="vettings"/>
 	<role name="postgres"/>
-	<position x="1540" y="780"/>
+	<position x="240" y="2180"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -807,52 +759,58 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
-<table name="licp_person_changes" layers="0" collapse-mode="1" max-obj-count="14" z-value="0">
+<table name="licp_person_changes" layers="0" collapse-mode="1" max-obj-count="15" z-value="0">
 	<schema name="daas"/>
 	<role name="postgres"/>
-	<position x="1200" y="1400"/>
-	<column name="LICP_LOG_ID">
+	<position x="60" y="4400"/>
+	<column name="licp_log_id">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="LICP_PID">
+	<column name="licp_pid">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="LICP_CREATED_TIME">
+	<column name="licp_created_time">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="LICP_APPROVE_TIME">
+	<column name="licp_approve_time">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_NO">
+	<column name="epss_pr_no">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_NAME">
+	<column name="epss_pr_name">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_SURNAME">
+	<column name="epss_pr_surname">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_NAME_CHI">
+	<column name="epss_pr_name_chi">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_SURNAME_TITLE">
+	<column name="epss_pr_surname_title">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_NATIONALITY">
+	<column name="epss_pr_nationality">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_HKID">
+	<column name="epss_pr_hkid">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_PASSPORT_NO">
+	<column name="epss_pr_passport_no">
 		<type name="character varying" length="0"/>
 	</column>
+	<column name="id" not-null="true" default-value="(gen_random_uuid())">
+		<type name="text" length="0"/>
+	</column>
+	<constraint name="licp_person_changes_pkey" type="pk-constr" table="daas.licp_person_changes">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
 </table>
 
 <table name="countries" layers="0" collapse-mode="1" max-obj-count="13" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="60" y="1400"/>
+	<position x="1340" y="1460"/>
 	<column name="id" not-null="true">
 		<type name="character varying" length="0"/>
 	</column>
@@ -894,7 +852,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="nationalities" layers="0" collapse-mode="1" max-obj-count="12" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="240" y="1400"/>
+	<position x="1520" y="1460"/>
 	<column name="id" not-null="true">
 		<type name="character varying" length="0"/>
 	</column>
@@ -933,7 +891,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="ra_types" layers="0" collapse-mode="1" max-obj-count="14" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="420" y="1400"/>
+	<position x="1720" y="1460"/>
 	<column name="id" not-null="true">
 		<type name="character varying" length="0"/>
 	</column>
@@ -978,7 +936,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="categories" layers="0" collapse-mode="1" max-obj-count="16" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="600" y="1400"/>
+	<position x="1900" y="1460"/>
 	<column name="id" not-null="true">
 		<type name="character varying" length="0"/>
 	</column>
@@ -1029,7 +987,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="submission_types" layers="0" collapse-mode="1" max-obj-count="13" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="840" y="1400"/>
+	<position x="2140" y="1460"/>
 	<column name="id" not-null="true">
 		<type name="character varying" length="0"/>
 	</column>
@@ -1071,7 +1029,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="positions" layers="0" collapse-mode="1" max-obj-count="15" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="60" y="1720"/>
+	<position x="1340" y="1780"/>
 	<column name="id" not-null="true">
 		<type name="character varying" length="0"/>
 	</column>
@@ -1119,7 +1077,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="eo_exams" layers="0" collapse-mode="1" max-obj-count="15" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="260" y="1720"/>
+	<position x="1560" y="1780"/>
 	<column name="id" not-null="true">
 		<type name="character varying" length="0"/>
 	</column>
@@ -1167,7 +1125,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="ra_types_eo_exams" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="440" y="1720"/>
+	<position x="1740" y="1780"/>
 	<column name="id" not-null="true">
 		<type name="character varying" length="0"/>
 	</column>
@@ -1203,7 +1161,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="eo_conditions" layers="0" collapse-mode="1" max-obj-count="13" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="640" y="1720"/>
+	<position x="1940" y="1780"/>
 	<column name="id" not-null="true">
 		<type name="character varying" length="0"/>
 	</column>
@@ -1242,10 +1200,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
-<table name="ai_profiles" layers="0" collapse-mode="1" max-obj-count="49" z-value="0">
+<table name="ai_profiles" layers="0" collapse-mode="1" max-obj-count="50" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="820" y="1720"/>
+	<position x="2100" y="1780"/>
 	<column name="functional_email">
 		<type name="character varying" length="0"/>
 	</column>
@@ -1369,6 +1327,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="id" not-null="true" default-value="(gen_random_uuid())">
 		<type name="text" length="0"/>
 	</column>
+	<column name="ai_name_official">
+		<type name="text" length="0"/>
+	</column>
 	<constraint name="ai_profiles_pkey" type="pk-constr" table="&quot;references&quot;.ai_profiles">
 		<columns names="id" ref-type="src-columns"/>
 	</constraint>
@@ -1377,7 +1338,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="call_codes" layers="0" collapse-mode="1" max-obj-count="12" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="60" y="2420"/>
+	<position x="1340" y="2520"/>
 	<column name="id" not-null="true">
 		<type name="character varying" length="0"/>
 	</column>
@@ -1416,7 +1377,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="holidays" layers="0" collapse-mode="1" max-obj-count="2" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="260" y="2420"/>
+	<position x="1560" y="2520"/>
 	<column name="day">
 		<type name="date" length="0"/>
 		<comment> <![CDATA[HOLIDAYS - DAY]]> </comment>
@@ -1432,7 +1393,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="manager_positions" layers="0" collapse-mode="1" max-obj-count="14" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="420" y="2420"/>
+	<position x="1700" y="2520"/>
 	<column name="id" not-null="true">
 		<type name="character varying" length="0"/>
 	</column>
@@ -1477,7 +1438,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="manager_para_two_positions" layers="0" collapse-mode="1" max-obj-count="14" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="600" y="2420"/>
+	<position x="1900" y="2520"/>
 	<column name="id" not-null="true">
 		<type name="character varying" length="0"/>
 	</column>
@@ -1519,124 +1480,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
-<table name="droc_comments" layers="0" collapse-mode="1" max-obj-count="14" z-value="0">
-	<schema name="droc"/>
-	<role name="postgres"/>
-	<position x="1740" y="1400"/>
-	<column name="id" not-null="true">
-		<type name="uuid" length="0"/>
-	</column>
-	<column name="created_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="created_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="updated_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="updated_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="deleted_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="deleted_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="date_of_input">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="comment_desc">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="comment_attachment_filename">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="id_attachments">
-		<type name="uuid" length="0"/>
-		<comment> <![CDATA[attachment_id]]> </comment>
-	</column>
-	<column name="id_droc_records">
-		<type name="uuid" length="0"/>
-	</column>
-	<constraint name="droc_attachments_pk" type="pk-constr" table="droc.droc_comments">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
-</table>
-
-<table name="droc_discs" layers="0" collapse-mode="1" max-obj-count="22" z-value="0">
-	<schema name="droc"/>
-	<role name="postgres"/>
-	<position x="2020" y="1400"/>
-	<column name="id" not-null="true">
-		<type name="uuid" length="0"/>
-	</column>
-	<column name="created_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="created_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="updated_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="updated_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="deleted_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="deleted_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="date_of_input">
-		<type name="date" length="0"/>
-	</column>
-	<column name="source">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="date_of_action">
-		<type name="date" length="0"/>
-	</column>
-	<column name="action_taken">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="action_taken_chn">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="press_release_eng_filename">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="id_attachments_eng">
-		<type name="uuid" length="0"/>
-		<comment> <![CDATA[attachment_id]]> </comment>
-	</column>
-	<column name="press_release_chn_filename">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="id_attachments_chn">
-		<type name="uuid" length="0"/>
-		<comment> <![CDATA[attachment_id]]> </comment>
-	</column>
-	<column name="shown">
-		<type name="boolean" length="0"/>
-	</column>
-	<column name="remarks">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="id_droc_records">
-		<type name="uuid" length="0"/>
-	</column>
-	<constraint name="droc_discs_pk" type="pk-constr" table="droc.droc_discs">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
-</table>
-
 <table name="ai_senior" layers="0" collapse-mode="1" max-obj-count="9" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="860" y="2420"/>
+	<position x="2140" y="2520"/>
 	<column name="ai_no">
 		<type name="text" length="0"/>
 	</column>
@@ -1669,7 +1516,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="ri_active" layers="0" collapse-mode="1" max-obj-count="34" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="60" y="2720"/>
+	<position x="1340" y="2800"/>
 	<column name="ri_no">
 		<type name="text" length="0"/>
 	</column>
@@ -1765,7 +1612,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="ri_status_change" layers="0" collapse-mode="1" max-obj-count="9" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="260" y="2720"/>
+	<position x="1560" y="2800"/>
 	<column name="ri_no">
 		<type name="text" length="0"/>
 	</column>
@@ -1795,10 +1642,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
-<table name="ai_case_officer_oa_mapping" layers="0" collapse-mode="1" max-obj-count="30" z-value="0">
+<table name="ai_case_officer_oa_mapping" layers="0" collapse-mode="1" max-obj-count="32" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="440" y="2720"/>
+	<position x="1740" y="2800"/>
 	<column name="ai_no">
 		<type name="text" length="0"/>
 	</column>
@@ -1874,6 +1721,12 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="conduct_case_h_post">
 		<type name="text" length="0"/>
 	</column>
+	<column name="case_h_oa_auth_id">
+		<type name="text" length="0"/>
+	</column>
+	<column name="conduct_h_oa_auth_id">
+		<type name="text" length="0"/>
+	</column>
 	<constraint name="ai_case_officer_oa_mapping_pkey" type="pk-constr" table="&quot;references&quot;.ai_case_officer_oa_mapping">
 		<columns names="id" ref-type="src-columns"/>
 	</constraint>
@@ -1882,7 +1735,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="ai_officer_resps" layers="0" collapse-mode="1" max-obj-count="39" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="740" y="2720"/>
+	<position x="2040" y="2800"/>
 	<column name="aor_co_no">
 		<type name="text" length="0"/>
 	</column>
@@ -1990,7 +1843,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="ai_officers" layers="0" collapse-mode="1" max-obj-count="66" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="960" y="2720"/>
+	<position x="2240" y="2800"/>
 	<column name="aio_co_no">
 		<type name="text" length="0"/>
 	</column>
@@ -2164,7 +2017,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="persons" layers="0" collapse-mode="1" max-obj-count="45" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="60" y="3620"/>
+	<position x="1340" y="3720"/>
 	<column name="pr_no">
 		<type name="text" length="0"/>
 	</column>
@@ -2287,7 +2140,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <table name="vetting_auth" layers="0" collapse-mode="1" max-obj-count="14" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="300" y="3620"/>
+	<position x="1600" y="3720"/>
 	<column name="id" not-null="true">
 		<type name="character varying" length="0"/>
 	</column>
@@ -2329,58 +2182,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
-<table name="vetting_contact" layers="0" collapse-mode="1" max-obj-count="15" z-value="0">
-	<schema name="&quot;references&quot;"/>
-	<role name="postgres"/>
-	<position x="520" y="3620"/>
-	<column name="id" not-null="true">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="created_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="created_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="updated_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="updated_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="deleted_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="deleted_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="auth_id">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="con_purpose">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="con_person">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="con_post">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="con_email">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="to_cc_bcc">
-		<type name="character varying" length="0"/>
-	</column>
-	<constraint name="vetting_contact_pk" type="pk-constr" table="&quot;references&quot;.vetting_contact">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
-</table>
-
 <table name="awc" layers="0" collapse-mode="1" max-obj-count="9" z-value="0">
 	<schema name="&quot;references&quot;"/>
 	<role name="postgres"/>
-	<position x="680" y="3620"/>
+	<position x="1800" y="3720"/>
 	<column name="pr_no">
 		<type name="text" length="0"/>
 	</column>
@@ -2410,10 +2215,328 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
-<table name="droc_records" layers="0" collapse-mode="1" max-obj-count="19" z-value="0">
-	<schema name="droc"/>
+<table name="licp_completed_person_changes" layers="0" collapse-mode="1" max-obj-count="18" z-value="0">
+	<schema name="daas"/>
 	<role name="postgres"/>
-	<position x="2280" y="1400"/>
+	<position x="280" y="4400"/>
+	<column name="licp_log_id">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="licp_pid">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="licp_created_time">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="licp_approve_time">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="epss_pr_no">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="epss_pr_name">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="epss_pr_surname">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="epss_pr_name_chi">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="epss_pr_surname_title">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="epss_pr_nationality">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="epss_pr_hkid">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="epss_pr_passport_no">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="upd_result_created_time">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="is_new_assigned">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="id" not-null="true" default-value="(gen_random_uuid())">
+		<type name="text" length="0"/>
+	</column>
+	<constraint name="licp_completed_person_changes_pkey" type="pk-constr" table="daas.licp_completed_person_changes">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="ri_reg_rec" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
+	<schema name="&quot;references&quot;"/>
+	<role name="postgres"/>
+	<position x="2000" y="3720"/>
+	<column name="id" not-null="true" default-value="(gen_random_uuid())">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_regno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_aino">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_ainame">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_ra">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_role">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_startdate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_enddate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_ainame_chn">
+		<type name="text" length="0"/>
+	</column>
+	<constraint name="ri_reg_rec_pkey" type="pk-constr" table="&quot;references&quot;.ri_reg_rec">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="capacities" layers="0" collapse-mode="1" max-obj-count="14" z-value="0">
+	<schema name="officers"/>
+	<role name="postgres"/>
+	<position x="440" y="60"/>
+	<column name="id" not-null="true" default-value="gen_random_uuid()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_L_UPD_YYYY
+AI_OFFICERS - AIO_L_UPD_MM
+AI_OFFICERS - AIO_L_UPD_DD
+AI_OFFICER_RESPS - AOR_L_UPD_YYYY
+AI_OFFICER_RESPS - AOR_L_UPD_MM
+AI_OFFICER_RESPS - AOR_L_UPD_DD]]> </comment>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_L_UPD_USER
+AI_OFFICER_RESPS - AOR_L_UPD_USER]]> </comment>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="ai_no">
+		<type name="character varying" length="6"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_CO_NO
+AI_OFFICER_RESPS - AOR_CO_NO]]> </comment>
+	</column>
+	<column name="type">
+		<type name="common.capacity_type" length="0"/>
+	</column>
+	<column name="id_person" not-null="true" default-value="gen_random_uuid()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="id_personal_information">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="id_contact_information">
+		<type name="uuid" length="0"/>
+	</column>
+	<constraint name="capacities_pk" type="pk-constr" table="officers.capacities">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="capacities_uq" type="uq-constr" table="officers.capacities">
+		<columns names="id_personal_information" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="capacities_uq1" type="uq-constr" table="officers.capacities">
+		<columns names="id_contact_information" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="capacities_uq2" type="uq-constr" table="officers.capacities">
+		<columns names="id_person" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="ceaced" layers="0" collapse-mode="1" max-obj-count="25" z-value="0">
+	<schema name="officers"/>
+	<role name="postgres"/>
+	<position x="680" y="60"/>
+	<column name="id" not-null="true" default-value="gen_random_uuid()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="capacity">
+		<type name="character varying" length="3"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_CAPACITY]]> </comment>
+	</column>
+	<column name="job_title">
+		<type name="character varying" length="200"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_DESIGNATION]]> </comment>
+	</column>
+	<column name="appointment_date">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_APPOINT_YYYY
+AI_OFFICERS - AIO_APPOINT_MM
+AI_OFFICERS - AIO_APPOINT_DD]]> </comment>
+	</column>
+	<column name="comfort_letter_issue_date">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_CL_ISSUE_DATE]]> </comment>
+	</column>
+	<column name="comfort_letter_approved_date">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_CL_APP_DATE]]> </comment>
+	</column>
+	<column name="comfort_letter_issued">
+		<type name="boolean" length="0"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_CL_ISSUED]]> </comment>
+	</column>
+	<column name="approval_date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="revocation_date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="withdrawal_date">
+		<type name="date" length="0"/>
+	</column>
+	<constraint name="ceaced_pk" type="pk-constr" table="officers.ceaced">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="manager" layers="0" collapse-mode="1" max-obj-count="25" z-value="0">
+	<schema name="officers"/>
+	<role name="postgres"/>
+	<position x="940" y="60"/>
+	<column name="id" not-null="true" default-value="gen_random_uuid()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="capacity">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[AI_OOFICER_RESPS - AOR_CAPACITY]]> </comment>
+	</column>
+	<column name="effective_date">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_EFF_YYYY
+AI_OFFICER_RESPS - AOR_EFF_MM
+AI_OFFICER_RESPS - AOR_EFF_DD]]> </comment>
+	</column>
+	<column name="responsibility_end_date">
+		<type name="smallint" length="0"/>
+		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_RESP_CHG_YYYY
+AI_OFFICER_RESPS - AOR_RESP_CHG_MM
+AI_OFFICER_RESPS - AOR_RESP_CHG_DD]]> </comment>
+	</column>
+	<column name="title">
+		<type name="character varying" length="255"/>
+		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_DESIGNATION]]> </comment>
+	</column>
+	<column name="is_employee">
+		<type name="boolean" length="0"/>
+		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_IS_EMPLOYEE]]> </comment>
+	</column>
+	<column name="employer">
+		<type name="character varying" length="255"/>
+		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_EMPLOYER]]> </comment>
+	</column>
+	<column name="paragraph">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_SCHED_3
+AI_OFFICER_RESPS - AOR_SCHED_4
+AI_OFFICER_RESPS - AOR_SCHED_5
+AI_OFFICER_RESPS - AOR_SCHED_6
+AI_OFFICER_RESPS - AOR_SCHED_7
+AI_OFFICER_RESPS - AOR_SCHED_8]]> </comment>
+	</column>
+	<column name="paragraph_2">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_SCHED_2A
+AI_OFFICER_RESPS - AOR_SCHED_2B
+AI_OFFICER_RESPS - AOR_SCHED_2C
+AI_OFFICER_RESPS - AOR_SCHED_2D
+AI_OFFICER_RESPS - AOR_SCHED_2E
+AI_OFFICER_RESPS - AOR_SCHED_2F
+AI_OFFICER_RESPS - AOR_SCHED_2G]]> </comment>
+	</column>
+	<column name="paragraph_2g">
+		<type name="character varying" length="200"/>
+		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_2G_TEXT]]> </comment>
+	</column>
+	<constraint name="manager_pk" type="pk-constr" table="officers.manager">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="rei" layers="0" collapse-mode="1" max-obj-count="19" z-value="0">
+	<schema name="officers"/>
+	<role name="postgres"/>
+	<position x="1180" y="60"/>
+	<column name="id" not-null="true" default-value="gen_random_uuid()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="regulated_activities">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[RI_REG_REC - RI_RA]]> </comment>
+	</column>
+	<column name="start_date">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[RI_REG_REC - RI_STARTDATE]]> </comment>
+	</column>
+	<column name="end_date">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[RI_REG_REC - RI_ENDTDATE]]> </comment>
+	</column>
+	<column name="personal_ce_number">
+		<type name="character varying" length="6"/>
+	</column>
+	<constraint name="rei_pk" type="pk-constr" table="officers.rei">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="eo" layers="0" collapse-mode="1" max-obj-count="19" z-value="0">
+	<schema name="officers"/>
+	<role name="postgres"/>
+	<position x="260" y="480"/>
+	<column name="id" not-null="true" default-value="gen_random_uuid()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="regulated_activities">
+		<type name="integer" length="0"/>
+		<comment> <![CDATA[RI_REG_REC - RI_RA]]> </comment>
+	</column>
+	<column name="start_date">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[RI_REG_REC - RI_STARTDATE]]> </comment>
+	</column>
+	<column name="end_date">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[RI_REG_REC - RI_ENDTDATE]]> </comment>
+	</column>
+	<column name="personal_ce_number">
+		<type name="character varying" length="6"/>
+	</column>
+	<constraint name="eo_pk" type="pk-constr" table="officers.eo">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="hkma_registration_number" layers="0" collapse-mode="1" max-obj-count="12" z-value="0">
+	<schema name="officers"/>
+	<role name="postgres"/>
+	<position x="500" y="480"/>
 	<column name="id" not-null="true">
 		<type name="uuid" length="0"/>
 	</column>
@@ -2435,90 +2558,652 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="deleted_by">
 		<type name="character varying" length="0"/>
 	</column>
+	<column name="id_eo" not-null="true">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="id_rei" not-null="true">
+		<type name="uuid" length="0"/>
+	</column>
 	<column name="hkma_registration_number">
+		<type name="character varying" length="6"/>
+		<comment> <![CDATA[RI_REG_REC - RI_REGNO]]> </comment>
+	</column>
+	<constraint name="attachments_pk" type="pk-constr" table="officers.hkma_registration_number">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="attachments_uq" type="uq-constr" table="officers.hkma_registration_number">
+		<columns names="id_eo" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="attachments_uq1" type="uq-constr" table="officers.hkma_registration_number">
+		<columns names="id_rei" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="personal_information" layers="0" collapse-mode="1" max-obj-count="30" z-value="0">
+	<schema name="officers"/>
+	<role name="postgres"/>
+	<position x="760" y="480"/>
+	<column name="id" not-null="true" default-value="gen_random_uuid()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="closed_date">
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+		<comment> <![CDATA[PERSONS - PR_L_UPD_YYYY
+PERSONS - PR_L_UPD_MM
+PERSONS - PR_L_UPD_DD]]> </comment>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+		<comment> <![CDATA[PERSONS - PR_L_UPD_USER]]> </comment>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="title">
+		<type name="character varying" length="10"/>
+		<comment> <![CDATA[PERSONS - PR_SURNAME_TITLE]]> </comment>
+	</column>
+	<column name="english_name_surname">
+		<type name="character varying" length="40"/>
+		<comment> <![CDATA[PERSONS - PR_SURNAME]]> </comment>
+	</column>
+	<column name="english_name_forenames">
+		<type name="character varying" length="40"/>
+		<comment> <![CDATA[PERSONS - PR_NAME]]> </comment>
+	</column>
+	<column name="chinese_name">
+		<type name="character varying" length="40"/>
+	</column>
+	<column name="chinese_commercial_code">
+		<type name="character varying" length="80"/>
+	</column>
+	<column name="aliases">
+		<type name="character varying" length="40"/>
+	</column>
+	<column name="former_names">
+		<type name="character varying" length="80"/>
+	</column>
+	<column name="gender">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="date_of_birth">
 		<type name="date" length="0"/>
 	</column>
-	<column name="closed_mark">
-		<type name="boolean" length="0"/>
-	</column>
-	<column name="form_name">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="surname">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="forenames">
-		<type name="character varying" length="0"/>
+	<column name="place_of_birth">
+		<type name="character varying" length="3"/>
 	</column>
 	<column name="hkid">
-		<type name="character varying" length="0"/>
+		<type name="character varying" length="9"/>
+		<comment> <![CDATA[PERSONS - PR_HKID]]> </comment>
+	</column>
+	<column name="nationality">
+		<type name="character varying" length="3"/>
+		<comment> <![CDATA[PERSONS - PR_NATIONALITY]]> </comment>
+	</column>
+	<column name="hk_perm_resident">
+		<type name="boolean" length="0"/>
 	</column>
 	<column name="passport_number">
-		<type name="character varying" length="0"/>
+		<type name="character varying" length="9"/>
+		<comment> <![CDATA[PERSONS - PR_PASSPORT_NO]]> </comment>
 	</column>
-	<column name="passport_issuing_country">
-		<type name="character varying" length="0"/>
+	<column name="passport_date_of_expiry">
+		<type name="date" length="0"/>
 	</column>
-	<constraint name="droc_records_pk" type="pk-constr" table="droc.droc_records">
+	<column name="passport_issuing_country_region">
+		<type name="character varying" length="3"/>
+	</column>
+	<column name="prc_resident_id">
+		<type name="character varying" length="18"/>
+	</column>
+	<column name="other_id_document">
+		<type name="character varying" length="100"/>
+	</column>
+	<constraint name="personal_information_pk" type="pk-constr" table="officers.personal_information">
 		<columns names="id" ref-type="src-columns"/>
 	</constraint>
 </table>
 
-<table name="licp_completed_person_changes" layers="0" collapse-mode="1" max-obj-count="16" z-value="0">
-	<schema name="daas"/>
+<table name="contact_information" layers="0" collapse-mode="1" max-obj-count="32" z-value="0">
+	<schema name="officers"/>
 	<role name="postgres"/>
-	<position x="1460" y="1400"/>
-	<column name="LICP_LOG_ID">
+	<position x="1040" y="480"/>
+	<column name="id" not-null="true" default-value="gen_random_uuid()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="LICP_PID">
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="LICP_CREATED_TIME">
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="LICP_APPROVE_TIME">
+	<column name="country_code_telephone_business">
+		<type name="character varying" length="3"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_OFFICE_TELE]]> </comment>
+	</column>
+	<column name="telephone_number_business">
+		<type name="character varying" length="15"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_OFFICE_TELE]]> </comment>
+	</column>
+	<column name="country_code_telephone_business_mobile">
+		<type name="character varying" length="3"/>
+	</column>
+	<column name="telephone_number_business_mobile">
+		<type name="character varying" length="15"/>
+	</column>
+	<column name="country_code_telephone_residential">
+		<type name="character varying" length="3"/>
+	</column>
+	<column name="telephone_number_residential">
+		<type name="character varying" length="15"/>
+	</column>
+	<column name="country_code_telephone_personal_mobile">
+		<type name="character varying" length="3"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_PORTABLE]]> </comment>
+	</column>
+	<column name="telephone_number_personal_mobile">
+		<type name="character varying" length="15"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_PORTABLE]]> </comment>
+	</column>
+	<column name="country_code_fax_business">
+		<type name="character varying" length="3"/>
+	</column>
+	<column name="fax_number_business">
+		<type name="character varying" length="15"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_OFFICE_FAX]]> </comment>
+	</column>
+	<column name="country_code_fax_personal">
+		<type name="character varying" length="3"/>
+	</column>
+	<column name="fax_number_personal">
+		<type name="character varying" length="15"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_HOME_FAX]]> </comment>
+	</column>
+	<column name="email_business">
+		<type name="character varying" length="320"/>
+	</column>
+	<column name="email_personal">
+		<type name="character varying" length="320"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_INTERNET_ADRL]]> </comment>
+	</column>
+	<column name="email_business_iclnet">
+		<type name="character varying" length="320"/>
+		<comment> <![CDATA[AI_OFFICERS - AIO_SECURE_EMAIL]]> </comment>
+	</column>
+	<column name="residential_address_detailed_address">
+		<type name="character varying" length="300"/>
+	</column>
+	<column name="residential_address_country_region">
+		<type name="character varying" length="3"/>
+		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_COUNTRY]]> </comment>
+	</column>
+	<column name="office_address_detailed_address">
+		<type name="character varying" length="300"/>
+	</column>
+	<column name="office_address_country_region">
+		<type name="character varying" length="3"/>
+	</column>
+	<column name="pager">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_NO">
+	<constraint name="contact_information_pk" type="pk-constr" table="officers.contact_information">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="person_number" layers="0" collapse-mode="1" max-obj-count="12" z-value="0">
+	<schema name="officers"/>
+	<role name="postgres"/>
+	<position x="1380" y="480"/>
+	<column name="id" not-null="true" default-value="gen_random_uuid()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_NAME">
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_SURNAME">
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_NAME_CHI">
+	<column name="id_ceaced" not-null="true" default-value="gen_random_uuid()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="id_manager" not-null="true" default-value="gen_random_uuid()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="pr_no">
+		<type name="character varying" length="0"/>
+		<comment> <![CDATA[PERSONS - PR_NO
+AI_OFFICERS - AIO_OFF_PR_NO
+AI_OFFICER_RESPS - AOR_OFF_PR_NO]]> </comment>
+	</column>
+	<constraint name="pr_number_pk" type="pk-constr" table="officers.person_number">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="pr_number_uq" type="uq-constr" table="officers.person_number">
+		<columns names="id_ceaced" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="pr_number_uq1" type="uq-constr" table="officers.person_number">
+		<columns names="id_manager" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="eo_employment_history_directorship_items" layers="0" collapse-mode="1" max-obj-count="24" z-value="0">
+	<schema name="officers"/>
+	<role name="postgres"/>
+	<position x="260" y="980"/>
+	<column name="id" not-null="true">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_SURNAME_TITLE">
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_NATIONALITY">
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_HKID">
+	<column name="firm_name">
+		<type name="character varying" length="60"/>
+		<comment> <![CDATA[EO_App_F767]]> </comment>
+	</column>
+	<column name="country">
+		<type name="character varying" length="3"/>
+		<comment> <![CDATA[EO_App_F768]]> </comment>
+	</column>
+	<column name="principal_business">
+		<type name="character varying" length="60"/>
+		<comment> <![CDATA[EO_App_F769]]> </comment>
+	</column>
+	<column name="relationship">
+		<type name="character varying" length="60"/>
+		<comment> <![CDATA[EO_App_F770]]> </comment>
+	</column>
+	<column name="ai_relationship">
+		<type name="character varying" length="500"/>
+		<comment> <![CDATA[EO_App_F771]]> </comment>
+	</column>
+	<column name="present">
+		<type name="boolean" length="0"/>
+		<comment> <![CDATA[EO_App_F772]]> </comment>
+	</column>
+	<column name="regulated">
+		<type name="boolean" length="0"/>
+	</column>
+	<column name="start_date">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[EO_App_F773]]> </comment>
+	</column>
+	<column name="end_date">
+		<type name="date" length="0"/>
+		<comment> <![CDATA[EO_App_F774]]> </comment>
+	</column>
+	<column name="roles_and_responsibilities">
+		<type name="character varying" length="1000"/>
+		<comment> <![CDATA[EO_App_F775]]> </comment>
+	</column>
+	<column name="resolution_of_coi">
+		<type name="character varying" length="1000"/>
+		<comment> <![CDATA[EO_App_F776]]> </comment>
+	</column>
+	<column name="proposed_time_allocation">
+		<type name="character varying" length="1000"/>
+		<comment> <![CDATA[EO_App_F777]]> </comment>
+	</column>
+	<column name="id_eo" not-null="true">
+		<type name="uuid" length="0"/>
+	</column>
+	<constraint name="eo_employment_directorship_items_pk" type="pk-constr" table="officers.eo_employment_history_directorship_items">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="eo_employment_directorship_items_uq" type="uq-constr" table="officers.eo_employment_history_directorship_items">
+		<columns names="id_eo" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="eo_employment_history_directorship_regulated_body_items" layers="0" collapse-mode="1" max-obj-count="12" z-value="0">
+	<schema name="officers"/>
+	<role name="postgres"/>
+	<position x="600" y="980"/>
+	<column name="id" not-null="true">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="EPSS_PR_PASSPORT_NO">
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="UPD_RESULT_CREATED_TIME">
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="IS_NEW_ASSIGNED">
+	<column name="regulator_name">
+		<type name="character varying" length="150"/>
+	</column>
+	<column name="country_code">
+		<type name="character varying" length="3"/>
+	</column>
+	<column name="id_eo_employment_history_directorship_items" not-null="true">
+		<type name="uuid" length="0"/>
+	</column>
+	<constraint name="eo_employment_history_directorship_regulated_body_items_pk" type="pk-constr" table="officers.eo_employment_history_directorship_regulated_body_items">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="eo_employment_history_directorship_regulated_body_items_uq" type="uq-constr" table="officers.eo_employment_history_directorship_regulated_body_items">
+		<columns names="id_eo_employment_history_directorship_items" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="eo_conditions" layers="0" collapse-mode="1" max-obj-count="13" z-value="0">
+	<schema name="officers"/>
+	<role name="postgres"/>
+	<position x="1020" y="980"/>
+	<column name="id" not-null="true">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
 		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="condition">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="condition_chinese">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="id_eo" not-null="true">
+		<type name="uuid" length="0"/>
+	</column>
+	<constraint name="eo_conditions_pk" type="pk-constr" table="officers.eo_conditions">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="eo_conditions_uq" type="uq-constr" table="officers.eo_conditions">
+		<columns names="id_eo" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="TMP_REI_REGREC" layers="0" collapse-mode="1" max-obj-count="2" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="1640" y="4400"/>
+	<column name="HKMA Registration Number">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Historical Record">
+		<type name="text" length="0"/>
 	</column>
 </table>
 
-<table name="tmp_ai_officer_resps" layers="0" collapse-mode="1" max-obj-count="39" z-value="0">
+<table name="TMP_RI_MASTER" layers="0" collapse-mode="1" max-obj-count="20" z-value="0">
 	<schema name="data_migration"/>
 	<role name="postgres"/>
-	<position x="60" y="4300"/>
+	<position x="1900" y="4400"/>
+	<column name="Registration Number Assigned by HKMA">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Surname (ENG)">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Other Name (ENG)">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Name of Registration Institution">
+		<type name="text" length="0"/>
+	</column>
+	<column name="CE num">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Name in Chinese">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Capacity">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Record of public disciplinary action taken by HKMA">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Record of public disciplinary action taken by SFC">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Business Address">
+		<type name="text" length="0"/>
+	</column>
+	<column name="EO / Non-EO">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Type of regulated activities (non-EO)">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Type of regulated activities (EO)">
+		<type name="text" length="0"/>
+	</column>
+	<column name="EO Condition">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Capacity in Chinese">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Latest Registration number &amp; Name">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Other Registration number &amp; Name">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="TMP_RI_MASTERALL" layers="0" collapse-mode="1" max-obj-count="20" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="2280" y="4400"/>
+	<column name="Registration Number Assigned by HKMA">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Surname (ENG)">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Other Name (ENG)">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Name of Registration Institution">
+		<type name="text" length="0"/>
+	</column>
+	<column name="CE num">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Name in Chinese">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Capacity">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Record of public disciplinary action taken by HKMA">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Record of public disciplinary action taken by SFC">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Business Address">
+		<type name="text" length="0"/>
+	</column>
+	<column name="EO / Non-EO">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Type of regulated activities (non-EO)">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Type of regulated activities (EO)">
+		<type name="text" length="0"/>
+	</column>
+	<column name="EO Condition">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Capacity in Chinese">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Latest Registration number &amp; Name">
+		<type name="text" length="0"/>
+	</column>
+	<column name="Other Registration number &amp; Name">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="vetting_contact" layers="0" collapse-mode="1" max-obj-count="16" z-value="0">
+	<schema name="&quot;references&quot;"/>
+	<role name="postgres"/>
+	<position x="2180" y="3720"/>
+	<column name="id">
+		<type name="text" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="text" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="text" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="text" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="text" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="text" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="text" length="0"/>
+	</column>
+	<column name="auth_id">
+		<type name="text" length="0"/>
+	</column>
+	<column name="con_purpose">
+		<type name="text" length="0"/>
+	</column>
+	<column name="con_person">
+		<type name="text" length="0"/>
+	</column>
+	<column name="con_post">
+		<type name="text" length="0"/>
+	</column>
+	<column name="con_email_to">
+		<type name="text" length="0"/>
+	</column>
+	<column name="con_email_cc">
+		<type name="text" length="0"/>
+	</column>
+	<column name="con_email_bcc">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="tmp_ai_officers" layers="0" collapse-mode="1" max-obj-count="12" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="60" y="60"/>
+	<column name="aio_co_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_off_co_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_capacity">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_off_pr_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_designation">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_user">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_secure_email">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="TMP_AI_OFFICER_RESPS" layers="0" collapse-mode="1" max-obj-count="39" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="2660" y="4400"/>
 	<column name="aor_co_no">
 		<type name="text" length="0"/>
 	</column>
@@ -2615,18 +3300,15 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="aor_sched_2b">
 		<type name="text" length="0"/>
 	</column>
-	<column name="id" not-null="true" default-value="(gen_random_uuid())">
+	<column name="id">
 		<type name="text" length="0"/>
 	</column>
-	<constraint name="ai_officer_resps_pkey" type="pk-constr" table="data_migration.tmp_ai_officer_resps">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
 </table>
 
-<table name="tmp_ai_officers" layers="0" collapse-mode="1" max-obj-count="62" z-value="0">
+<table name="TMP_AI_OFFICERS" layers="0" collapse-mode="1" max-obj-count="66" z-value="0">
 	<schema name="data_migration"/>
 	<role name="postgres"/>
-	<position x="260" y="4300"/>
+	<position x="2880" y="4400"/>
 	<column name="aio_co_no">
 		<type name="text" length="0"/>
 	</column>
@@ -2780,19 +3462,145 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="aio_cl_app_date">
 		<type name="text" length="0"/>
 	</column>
-	<column name="id" not-null="true" default-value="(gen_random_uuid())">
+	<column name="id">
 		<type name="text" length="0"/>
 	</column>
-	<constraint name="tmp_ai_officers_pkey" type="pk-constr" table="data_migration.tmp_ai_officers">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
+	<column name="aio_prtnr_inchg">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_personal_portable">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_personal_email">
+		<type name="text" length="0"/>
+	</column>
 </table>
 
-<table name="ri_reg_rec" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
-	<schema name="&quot;references&quot;"/>
+<table name="TMP_PERSONS" layers="0" collapse-mode="1" max-obj-count="45" z-value="0">
+	<schema name="data_migration"/>
 	<role name="postgres"/>
-	<position x="880" y="3620"/>
-	<column name="id" not-null="true" default-value="(gen_random_uuid())">
+	<position x="1640" y="5320"/>
+	<column name="pr_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_name">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_unsuit_flag">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_hkid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_l_upd_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_l_upd_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_l_upd_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_l_upd_user">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_surname_title">
+		<type name="text" length="0"/>
+	</column>
+	<column name="persons_oid">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="status">
+		<type name="text" length="0"/>
+	</column>
+	<column name="version">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="chk_status">
+		<type name="text" length="0"/>
+	</column>
+	<column name="rec_status">
+		<type name="text" length="0"/>
+	</column>
+	<column name="lst_upd_maker">
+		<type name="text" length="0"/>
+	</column>
+	<column name="lst_upd_date">
+		<type name="text" length="0"/>
+	</column>
+	<column name="lst_upd_user">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_surname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_suit_flag">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_name_chi">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_remark">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_file_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_unsuit_cat_a">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_remark_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_remark_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_remark_merge">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_passport_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_nationality">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_remark_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_remark_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_unsuit_cat_b">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_unsuit_cat_c">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_remark_6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_remark_7">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_remark_8">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_remark_9">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pr_rem_fr_watch_list_date">
+		<type name="text" length="0"/>
+	</column>
+	<column name="id">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="TMP_RI_REG_REC" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="1900" y="5320"/>
+	<column name="id">
 		<type name="text" length="0"/>
 	</column>
 	<column name="ri_regno">
@@ -2819,16 +3627,85 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="ri_ainame_chn">
 		<type name="text" length="0"/>
 	</column>
-	<constraint name="ri_reg_rec_pkey" type="pk-constr" table="&quot;references&quot;.ri_reg_rec">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
 </table>
 
-<table name="capacities" layers="0" collapse-mode="1" max-obj-count="14" z-value="0">
+<table name="STG_RI_REG_REC_OTHER" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="2080" y="5320"/>
+	<column name="id">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_regno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_aino">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_ainame">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_ra">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_role">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_startdate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_enddate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_ainame_chn">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="ais" layers="0" collapse-mode="1" max-obj-count="13" z-value="0">
 	<schema name="officers"/>
 	<role name="postgres"/>
-	<position x="220" y="60"/>
-	<column name="id" not-null="true">
+	<position x="1240" y="980"/>
+	<column name="id" not-null="true" default-value="gen_random_uuid()">
+		<type name="text" length="0"/>
+	</column>
+	<column name="created_at" default-value="CURRENT_TIMESTAMP">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="100"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="100"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="100"/>
+	</column>
+	<column name="ai_name">
+		<type name="character varying" length="255"/>
+	</column>
+	<column name="ai_no">
+		<type name="character varying" length="50"/>
+	</column>
+	<column name="ai_ce_number">
+		<type name="character varying" length="50"/>
+	</column>
+	<column name="address">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="ceaced" layers="0" collapse-mode="1" max-obj-count="25" z-value="0">
+	<schema name="capacities"/>
+	<role name="postgres"/>
+	<position x="1700" y="60"/>
+	<column name="id">
 		<type name="uuid" length="0"/>
 	</column>
 	<column name="created_at">
@@ -2839,17 +3716,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</column>
 	<column name="updated_at">
 		<type name="timestamp" length="0"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_L_UPD_YYYY
-AI_OFFICERS - AIO_L_UPD_MM
-AI_OFFICERS - AIO_L_UPD_DD
-AI_OFFICER_RESPS - AOR_L_UPD_YYYY
-AI_OFFICER_RESPS - AOR_L_UPD_MM
-AI_OFFICER_RESPS - AOR_L_UPD_DD]]> </comment>
 	</column>
 	<column name="updated_by">
 		<type name="character varying" length="0"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_L_UPD_USER
-AI_OFFICER_RESPS - AOR_L_UPD_USER]]> </comment>
 	</column>
 	<column name="deleted_at">
 		<type name="timestamp" length="0"/>
@@ -2857,15 +3726,13 @@ AI_OFFICER_RESPS - AOR_L_UPD_USER]]> </comment>
 	<column name="deleted_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="ai_code">
+	<column name="ai_no">
 		<type name="character varying" length="6"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_CO_NO
-AI_OFFICER_RESPS - AOR_CO_NO]]> </comment>
 	</column>
 	<column name="type">
 		<type name="common.capacity_type" length="0"/>
 	</column>
-	<column name="id_person" not-null="true">
+	<column name="id_person">
 		<type name="uuid" length="0"/>
 	</column>
 	<column name="id_personal_information">
@@ -2874,207 +3741,49 @@ AI_OFFICER_RESPS - AOR_CO_NO]]> </comment>
 	<column name="id_contact_information">
 		<type name="uuid" length="0"/>
 	</column>
-	<constraint name="capacities_pk" type="pk-constr" table="officers.capacities">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
-	<constraint name="capacities_uq" type="uq-constr" table="officers.capacities">
-		<columns names="id_personal_information" ref-type="src-columns"/>
-	</constraint>
-	<constraint name="capacities_uq1" type="uq-constr" table="officers.capacities">
-		<columns names="id_contact_information" ref-type="src-columns"/>
-	</constraint>
-	<constraint name="capacities_uq2" type="uq-constr" table="officers.capacities">
-		<columns names="id_person" ref-type="src-columns"/>
-	</constraint>
-</table>
-
-<table name="ceaced" layers="0" collapse-mode="1" max-obj-count="25" z-value="0">
-	<schema name="officers"/>
-	<role name="postgres"/>
-	<position x="460" y="60"/>
-	<column name="id" not-null="true">
-		<type name="uuid" length="0"/>
-	</column>
 	<column name="capacity">
 		<type name="character varying" length="3"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_CAPACITY]]> </comment>
 	</column>
 	<column name="job_title">
 		<type name="character varying" length="200"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_DESIGNATION]]> </comment>
 	</column>
 	<column name="appointment_date">
 		<type name="date" length="0"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_APPOINT_YYYY
-AI_OFFICERS - AIO_APPOINT_MM
-AI_OFFICERS - AIO_APPOINT_DD]]> </comment>
 	</column>
 	<column name="comfort_letter_issue_date">
 		<type name="date" length="0"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_CL_ISSUE_DATE]]> </comment>
 	</column>
 	<column name="comfort_letter_approved_date">
 		<type name="date" length="0"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_CL_APP_DATE]]> </comment>
 	</column>
 	<column name="comfort_letter_issued">
 		<type name="boolean" length="0"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_CL_ISSUED]]> </comment>
 	</column>
 	<column name="approval_date">
-		<type name="smallint" length="0"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_APP_YYYY
-AI_OFFICERS - AIO_APP_MM
-AI_OFFICERS - AIO_APP_DD]]> </comment>
+		<type name="date" length="0"/>
 	</column>
 	<column name="revocation_date">
-		<type name="smallint" length="0"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_RESIGN_YYYY
-AI_OFFICERS - AIO_RESIGN_MM
-AI_OFFICERS - AIO_RESIGN_DD]]> </comment>
+		<type name="date" length="0"/>
 	</column>
 	<column name="withdrawal_date">
 		<type name="date" length="0"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_WITHDRAWAL_YYYY
-AI_OFFICERS - AIO_WITHDRAWAL_MM
-AI_OFFICERS - AIO_WITHDRAWAL_DD]]> </comment>
 	</column>
-	<constraint name="ceaced_pk" type="pk-constr" table="officers.ceaced">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
 </table>
 
-<table name="manager" layers="0" collapse-mode="1" max-obj-count="25" z-value="0">
-	<schema name="officers"/>
+<table name="capacities" layers="0" collapse-mode="1" max-obj-count="14" z-value="0">
+	<schema name="capacities"/>
 	<role name="postgres"/>
-	<position x="720" y="60"/>
-	<column name="id" not-null="true">
+	<position x="1980" y="60"/>
+	<column name="id" default-value="gen_random_uuid()">
 		<type name="uuid" length="0"/>
 	</column>
-	<column name="capacity">
-		<type name="integer" length="0"/>
-		<comment> <![CDATA[AI_OOFICER_RESPS - AOR_CAPACITY]]> </comment>
-	</column>
-	<column name="effective_date">
-		<type name="smallint" length="0"/>
-		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_EFF_YYYY
-AI_OFFICER_RESPS - AOR_EFF_MM
-AI_OFFICER_RESPS - AOR_EFF_DD]]> </comment>
-	</column>
-	<column name="responsibility_end_date">
-		<type name="smallint" length="0"/>
-		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_RESP_CHG_YYYY
-AI_OFFICER_RESPS - AOR_RESP_CHG_MM
-AI_OFFICER_RESPS - AOR_RESP_CHG_DD]]> </comment>
-	</column>
-	<column name="title">
-		<type name="character varying" length="255"/>
-		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_DESIGNATION]]> </comment>
-	</column>
-	<column name="is_employee">
-		<type name="boolean" length="0"/>
-		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_IS_EMPLOYEE]]> </comment>
-	</column>
-	<column name="employer">
-		<type name="character varying" length="255"/>
-		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_EMPLOYER]]> </comment>
-	</column>
-	<column name="paragraph">
-		<type name="integer" length="0"/>
-		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_SCHED_3
-AI_OFFICER_RESPS - AOR_SCHED_4
-AI_OFFICER_RESPS - AOR_SCHED_5
-AI_OFFICER_RESPS - AOR_SCHED_6
-AI_OFFICER_RESPS - AOR_SCHED_7
-AI_OFFICER_RESPS - AOR_SCHED_8]]> </comment>
-	</column>
-	<column name="paragraph_2">
-		<type name="integer" length="0"/>
-		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_SCHED_2A
-AI_OFFICER_RESPS - AOR_SCHED_2B
-AI_OFFICER_RESPS - AOR_SCHED_2C
-AI_OFFICER_RESPS - AOR_SCHED_2D
-AI_OFFICER_RESPS - AOR_SCHED_2E
-AI_OFFICER_RESPS - AOR_SCHED_2F
-AI_OFFICER_RESPS - AOR_SCHED_2G]]> </comment>
-	</column>
-	<column name="paragraph_2g">
-		<type name="character varying" length="200"/>
-		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_2G_TEXT]]> </comment>
-	</column>
-	<constraint name="manager_pk" type="pk-constr" table="officers.manager">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
-</table>
-
-<table name="rei" layers="0" collapse-mode="1" max-obj-count="19" z-value="0">
-	<schema name="officers"/>
-	<role name="postgres"/>
-	<position x="960" y="60"/>
-	<column name="id" not-null="true">
-		<type name="uuid" length="0"/>
-	</column>
-	<column name="regulated_activities">
-		<type name="integer" length="0"/>
-		<comment> <![CDATA[RI_REG_REC - RI_RA]]> </comment>
-	</column>
-	<column name="start_date">
-		<type name="date" length="0"/>
-		<comment> <![CDATA[RI_REG_REC - RI_STARTDATE]]> </comment>
-	</column>
-	<column name="end_date">
-		<type name="date" length="0"/>
-		<comment> <![CDATA[RI_REG_REC - RI_ENDTDATE]]> </comment>
-	</column>
-	<column name="personal_ce_number">
-		<type name="character varying" length="6"/>
-	</column>
-	<constraint name="rei_pk" type="pk-constr" table="officers.rei">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
-</table>
-
-<table name="eo" layers="0" collapse-mode="1" max-obj-count="19" z-value="0">
-	<schema name="officers"/>
-	<role name="postgres"/>
-	<position x="60" y="480"/>
-	<column name="id" not-null="true">
-		<type name="uuid" length="0"/>
-	</column>
-	<column name="regulated_activities">
-		<type name="integer" length="0"/>
-		<comment> <![CDATA[RI_REG_REC - RI_RA]]> </comment>
-	</column>
-	<column name="start_date">
-		<type name="date" length="0"/>
-		<comment> <![CDATA[RI_REG_REC - RI_STARTDATE]]> </comment>
-	</column>
-	<column name="end_date">
-		<type name="date" length="0"/>
-		<comment> <![CDATA[RI_REG_REC - RI_ENDTDATE]]> </comment>
-	</column>
-	<column name="personal_ce_number">
-		<type name="character varying" length="6"/>
-	</column>
-	<constraint name="eo_pk" type="pk-constr" table="officers.eo">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
-</table>
-
-<table name="hkma_registration_number" layers="0" collapse-mode="1" max-obj-count="12" z-value="0">
-	<schema name="officers"/>
-	<role name="postgres"/>
-	<position x="280" y="480"/>
-	<column name="id" not-null="true">
-		<type name="uuid" length="0"/>
-	</column>
-	<column name="created_at">
+	<column name="created_at" default-value="CURRENT_TIMESTAMP">
 		<type name="timestamp" length="0"/>
 	</column>
 	<column name="created_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="updated_at">
+	<column name="updated_at" default-value="CURRENT_TIMESTAMP">
 		<type name="timestamp" length="0"/>
 	</column>
 	<column name="updated_by">
@@ -3086,126 +3795,28 @@ AI_OFFICER_RESPS - AOR_SCHED_2G]]> </comment>
 	<column name="deleted_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="id_eo" not-null="true">
-		<type name="uuid" length="0"/>
-	</column>
-	<column name="id_rei" not-null="true">
-		<type name="uuid" length="0"/>
-	</column>
-	<column name="hkma_registration_number">
+	<column name="ai_no">
 		<type name="character varying" length="6"/>
-		<comment> <![CDATA[RI_REG_REC - RI_REGNO]]> </comment>
 	</column>
-	<constraint name="attachments_pk" type="pk-constr" table="officers.hkma_registration_number">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
-	<constraint name="attachments_uq" type="uq-constr" table="officers.hkma_registration_number">
-		<columns names="id_eo" ref-type="src-columns"/>
-	</constraint>
-	<constraint name="attachments_uq1" type="uq-constr" table="officers.hkma_registration_number">
-		<columns names="id_rei" ref-type="src-columns"/>
-	</constraint>
-</table>
-
-<table name="personal_information" layers="0" collapse-mode="1" max-obj-count="30" z-value="0">
-	<schema name="officers"/>
-	<role name="postgres"/>
-	<position x="540" y="480"/>
-	<column name="id" not-null="true">
+	<column name="type">
+		<type name="common.capacity_type" length="0"/>
+	</column>
+	<column name="id_person">
 		<type name="uuid" length="0"/>
 	</column>
-	<column name="created_at">
-		<type name="timestamp" length="0"/>
+	<column name="id_personal_information">
+		<type name="uuid" length="0"/>
 	</column>
-	<column name="created_by">
-		<type name="character varying" length="0"/>
+	<column name="id_contact_information">
+		<type name="uuid" length="0"/>
 	</column>
-	<column name="updated_at">
-		<type name="timestamp" length="0"/>
-		<comment> <![CDATA[PERSONS - PR_L_UPD_YYYY
-PERSONS - PR_L_UPD_MM
-PERSONS - PR_L_UPD_DD]]> </comment>
-	</column>
-	<column name="updated_by">
-		<type name="character varying" length="0"/>
-		<comment> <![CDATA[PERSONS - PR_L_UPD_USER]]> </comment>
-	</column>
-	<column name="deleted_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="deleted_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="title">
-		<type name="character varying" length="10"/>
-		<comment> <![CDATA[PERSONS - PR_SURNAME_TITLE]]> </comment>
-	</column>
-	<column name="english_name_surname">
-		<type name="character varying" length="40"/>
-		<comment> <![CDATA[PERSONS - PR_SURNAME]]> </comment>
-	</column>
-	<column name="english_name_forenames">
-		<type name="character varying" length="40"/>
-		<comment> <![CDATA[PERSONS - PR_NAME]]> </comment>
-	</column>
-	<column name="chinese_name">
-		<type name="character varying" length="40"/>
-	</column>
-	<column name="chinese_commercial_code">
-		<type name="character varying" length="80"/>
-	</column>
-	<column name="aliases">
-		<type name="character varying" length="40"/>
-	</column>
-	<column name="former_names">
-		<type name="character varying" length="80"/>
-	</column>
-	<column name="gender">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="date_of_birth">
-		<type name="date" length="0"/>
-	</column>
-	<column name="place_of_birth">
-		<type name="character varying" length="3"/>
-	</column>
-	<column name="hkid">
-		<type name="character varying" length="9"/>
-		<comment> <![CDATA[PERSONS - PR_HKID]]> </comment>
-	</column>
-	<column name="nationality">
-		<type name="character varying" length="3"/>
-		<comment> <![CDATA[PERSONS - PR_NATIONALITY]]> </comment>
-	</column>
-	<column name="hk_perm_resident">
-		<type name="boolean" length="0"/>
-	</column>
-	<column name="passport_number">
-		<type name="character varying" length="9"/>
-		<comment> <![CDATA[PERSONS - PR_PASSPORT_NO]]> </comment>
-	</column>
-	<column name="passport_date_of_expiry">
-		<type name="date" length="0"/>
-	</column>
-	<column name="passport_issuing_country_region">
-		<type name="character varying" length="3"/>
-	</column>
-	<column name="prc_resident_id">
-		<type name="character varying" length="18"/>
-	</column>
-	<column name="other_id_document">
-		<type name="character varying" length="100"/>
-	</column>
-	<constraint name="personal_information_pk" type="pk-constr" table="officers.personal_information">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
 </table>
 
 <table name="contact_information" layers="0" collapse-mode="1" max-obj-count="32" z-value="0">
-	<schema name="officers"/>
+	<schema name="capacities"/>
 	<role name="postgres"/>
-	<position x="820" y="480"/>
-	<column name="id" not-null="true">
+	<position x="2220" y="60"/>
+	<column name="id">
 		<type name="uuid" length="0"/>
 	</column>
 	<column name="created_at">
@@ -3228,11 +3839,9 @@ PERSONS - PR_L_UPD_DD]]> </comment>
 	</column>
 	<column name="country_code_telephone_business">
 		<type name="character varying" length="3"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_OFFICE_TELE]]> </comment>
 	</column>
 	<column name="telephone_number_business">
 		<type name="character varying" length="15"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_OFFICE_TELE]]> </comment>
 	</column>
 	<column name="country_code_telephone_business_mobile">
 		<type name="character varying" length="3"/>
@@ -3248,43 +3857,36 @@ PERSONS - PR_L_UPD_DD]]> </comment>
 	</column>
 	<column name="country_code_telephone_personal_mobile">
 		<type name="character varying" length="3"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_PORTABLE]]> </comment>
 	</column>
 	<column name="telephone_number_personal_mobile">
 		<type name="character varying" length="15"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_PORTABLE]]> </comment>
 	</column>
 	<column name="country_code_fax_business">
 		<type name="character varying" length="3"/>
 	</column>
 	<column name="fax_number_business">
 		<type name="character varying" length="15"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_OFFICE_FAX]]> </comment>
 	</column>
 	<column name="country_code_fax_personal">
 		<type name="character varying" length="3"/>
 	</column>
 	<column name="fax_number_personal">
 		<type name="character varying" length="15"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_HOME_FAX]]> </comment>
 	</column>
 	<column name="email_business">
 		<type name="character varying" length="320"/>
 	</column>
 	<column name="email_personal">
 		<type name="character varying" length="320"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_INTERNET_ADRL]]> </comment>
 	</column>
 	<column name="email_business_iclnet">
 		<type name="character varying" length="320"/>
-		<comment> <![CDATA[AI_OFFICERS - AIO_SECURE_EMAIL]]> </comment>
 	</column>
 	<column name="residential_address_detailed_address">
 		<type name="character varying" length="300"/>
 	</column>
 	<column name="residential_address_country_region">
 		<type name="character varying" length="3"/>
-		<comment> <![CDATA[AI_OFFICER_RESPS - AOR_COUNTRY]]> </comment>
 	</column>
 	<column name="office_address_detailed_address">
 		<type name="character varying" length="300"/>
@@ -3295,16 +3897,13 @@ PERSONS - PR_L_UPD_DD]]> </comment>
 	<column name="pager">
 		<type name="character varying" length="0"/>
 	</column>
-	<constraint name="contact_information_pk" type="pk-constr" table="officers.contact_information">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
 </table>
 
-<table name="person_number" layers="0" collapse-mode="1" max-obj-count="12" z-value="0">
-	<schema name="officers"/>
+<table name="eo" layers="0" collapse-mode="1" max-obj-count="19" z-value="0">
+	<schema name="capacities"/>
 	<role name="postgres"/>
-	<position x="1160" y="480"/>
-	<column name="id" not-null="true">
+	<position x="2540" y="60"/>
+	<column name="id">
 		<type name="uuid" length="0"/>
 	</column>
 	<column name="created_at">
@@ -3325,159 +3924,40 @@ PERSONS - PR_L_UPD_DD]]> </comment>
 	<column name="deleted_by">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="id_ceaced" not-null="true">
+	<column name="ai_no">
+		<type name="character varying" length="6"/>
+	</column>
+	<column name="type">
+		<type name="common.capacity_type" length="0"/>
+	</column>
+	<column name="id_person">
 		<type name="uuid" length="0"/>
 	</column>
-	<column name="id_manager" not-null="true">
+	<column name="id_personal_information">
 		<type name="uuid" length="0"/>
 	</column>
-	<column name="pr_no">
-		<type name="character varying" length="0"/>
-		<comment> <![CDATA[PERSONS - PR_NO
-AI_OFFICERS - AIO_OFF_PR_NO
-AI_OFFICER_RESPS - AOR_OFF_PR_NO]]> </comment>
-	</column>
-	<constraint name="pr_number_pk" type="pk-constr" table="officers.person_number">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
-	<constraint name="pr_number_uq" type="uq-constr" table="officers.person_number">
-		<columns names="id_ceaced" ref-type="src-columns"/>
-	</constraint>
-	<constraint name="pr_number_uq1" type="uq-constr" table="officers.person_number">
-		<columns names="id_manager" ref-type="src-columns"/>
-	</constraint>
-</table>
-
-<table name="eo_employment_history_directorship_items" layers="0" collapse-mode="1" max-obj-count="24" z-value="0">
-	<schema name="officers"/>
-	<role name="postgres"/>
-	<position x="60" y="980"/>
-	<column name="id" not-null="true">
+	<column name="id_contact_information">
 		<type name="uuid" length="0"/>
 	</column>
-	<column name="created_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="created_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="updated_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="updated_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="deleted_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="deleted_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="firm_name">
-		<type name="character varying" length="60"/>
-		<comment> <![CDATA[EO_App_F767]]> </comment>
-	</column>
-	<column name="country">
-		<type name="character varying" length="3"/>
-		<comment> <![CDATA[EO_App_F768]]> </comment>
-	</column>
-	<column name="principal_business">
-		<type name="character varying" length="60"/>
-		<comment> <![CDATA[EO_App_F769]]> </comment>
-	</column>
-	<column name="relationship">
-		<type name="character varying" length="60"/>
-		<comment> <![CDATA[EO_App_F770]]> </comment>
-	</column>
-	<column name="ai_relationship">
-		<type name="character varying" length="500"/>
-		<comment> <![CDATA[EO_App_F771]]> </comment>
-	</column>
-	<column name="present">
-		<type name="boolean" length="0"/>
-		<comment> <![CDATA[EO_App_F772]]> </comment>
-	</column>
-	<column name="regulated">
-		<type name="boolean" length="0"/>
+	<column name="regulated_activities">
+		<type name="integer" length="0"/>
 	</column>
 	<column name="start_date">
 		<type name="date" length="0"/>
-		<comment> <![CDATA[EO_App_F773]]> </comment>
 	</column>
 	<column name="end_date">
 		<type name="date" length="0"/>
-		<comment> <![CDATA[EO_App_F774]]> </comment>
 	</column>
-	<column name="roles_and_responsibilities">
-		<type name="character varying" length="1000"/>
-		<comment> <![CDATA[EO_App_F775]]> </comment>
+	<column name="personal_ce_number">
+		<type name="character varying" length="6"/>
 	</column>
-	<column name="resolution_of_coi">
-		<type name="character varying" length="1000"/>
-		<comment> <![CDATA[EO_App_F776]]> </comment>
-	</column>
-	<column name="proposed_time_allocation">
-		<type name="character varying" length="1000"/>
-		<comment> <![CDATA[EO_App_F777]]> </comment>
-	</column>
-	<column name="id_eo" not-null="true">
-		<type name="uuid" length="0"/>
-	</column>
-	<constraint name="eo_employment_directorship_items_pk" type="pk-constr" table="officers.eo_employment_history_directorship_items">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
-	<constraint name="eo_employment_directorship_items_uq" type="uq-constr" table="officers.eo_employment_history_directorship_items">
-		<columns names="id_eo" ref-type="src-columns"/>
-	</constraint>
-</table>
-
-<table name="eo_employment_history_directorship_regulated_body_items" layers="0" collapse-mode="1" max-obj-count="12" z-value="0">
-	<schema name="officers"/>
-	<role name="postgres"/>
-	<position x="380" y="980"/>
-	<column name="id" not-null="true">
-		<type name="uuid" length="0"/>
-	</column>
-	<column name="created_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="created_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="updated_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="updated_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="deleted_at">
-		<type name="timestamp" length="0"/>
-	</column>
-	<column name="deleted_by">
-		<type name="character varying" length="0"/>
-	</column>
-	<column name="regulator_name">
-		<type name="character varying" length="150"/>
-	</column>
-	<column name="country_code">
-		<type name="character varying" length="3"/>
-	</column>
-	<column name="id_eo_employment_history_directorship_items" not-null="true">
-		<type name="uuid" length="0"/>
-	</column>
-	<constraint name="eo_employment_history_directorship_regulated_body_items_pk" type="pk-constr" table="officers.eo_employment_history_directorship_regulated_body_items">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
-	<constraint name="eo_employment_history_directorship_regulated_body_items_uq" type="uq-constr" table="officers.eo_employment_history_directorship_regulated_body_items">
-		<columns names="id_eo_employment_history_directorship_items" ref-type="src-columns"/>
-	</constraint>
 </table>
 
 <table name="eo_conditions" layers="0" collapse-mode="1" max-obj-count="13" z-value="0">
-	<schema name="officers"/>
+	<schema name="capacities"/>
 	<role name="postgres"/>
-	<position x="820" y="980"/>
-	<column name="id" not-null="true">
+	<position x="2780" y="60"/>
+	<column name="id">
 		<type name="uuid" length="0"/>
 	</column>
 	<column name="created_at">
@@ -3507,38 +3987,3278 @@ AI_OFFICER_RESPS - AOR_OFF_PR_NO]]> </comment>
 	<column name="condition_chinese">
 		<type name="character varying" length="0"/>
 	</column>
-	<column name="id_eo" not-null="true">
+	<column name="id_eo">
 		<type name="uuid" length="0"/>
 	</column>
-	<constraint name="eo_conditions_pk" type="pk-constr" table="officers.eo_conditions">
+</table>
+
+<table name="eo_employment_history_directorship_items" layers="0" collapse-mode="1" max-obj-count="24" z-value="0">
+	<schema name="capacities"/>
+	<role name="postgres"/>
+	<position x="1700" y="560"/>
+	<column name="id">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="firm_name">
+		<type name="character varying" length="60"/>
+	</column>
+	<column name="country">
+		<type name="character varying" length="3"/>
+	</column>
+	<column name="principal_business">
+		<type name="character varying" length="60"/>
+	</column>
+	<column name="relationship">
+		<type name="character varying" length="60"/>
+	</column>
+	<column name="ai_relationship">
+		<type name="character varying" length="500"/>
+	</column>
+	<column name="present">
+		<type name="boolean" length="0"/>
+	</column>
+	<column name="regulated">
+		<type name="boolean" length="0"/>
+	</column>
+	<column name="start_date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="end_date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="roles_and_responsibilities">
+		<type name="character varying" length="1000"/>
+	</column>
+	<column name="resolution_of_coi">
+		<type name="character varying" length="1000"/>
+	</column>
+	<column name="proposed_time_allocation">
+		<type name="character varying" length="1000"/>
+	</column>
+	<column name="id_eo">
+		<type name="uuid" length="0"/>
+	</column>
+</table>
+
+<table name="eo_employment_history_directorship_regulated_body_items" layers="0" collapse-mode="1" max-obj-count="12" z-value="0">
+	<schema name="capacities"/>
+	<role name="postgres"/>
+	<position x="2040" y="560"/>
+	<column name="id">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="regulator_name">
+		<type name="character varying" length="150"/>
+	</column>
+	<column name="country_code">
+		<type name="character varying" length="3"/>
+	</column>
+	<column name="id_eo_employment_history_directorship_items">
+		<type name="uuid" length="0"/>
+	</column>
+</table>
+
+<table name="hkma_registration_number" layers="0" collapse-mode="1" max-obj-count="12" z-value="0">
+	<schema name="capacities"/>
+	<role name="postgres"/>
+	<position x="2460" y="560"/>
+	<column name="id">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="id_eo">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="id_rei">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="hkma_registration_number">
+		<type name="character varying" length="6"/>
+	</column>
+</table>
+
+<table name="manager" layers="0" collapse-mode="1" max-obj-count="25" z-value="0">
+	<schema name="capacities"/>
+	<role name="postgres"/>
+	<position x="2720" y="560"/>
+	<column name="id">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="ai_no">
+		<type name="character varying" length="6"/>
+	</column>
+	<column name="type">
+		<type name="common.capacity_type" length="0"/>
+	</column>
+	<column name="id_person">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="id_personal_information">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="id_contact_information">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="capacity">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="title">
+		<type name="character varying" length="255"/>
+	</column>
+	<column name="is_employee">
+		<type name="boolean" length="0"/>
+	</column>
+	<column name="employer">
+		<type name="character varying" length="255"/>
+	</column>
+	<column name="paragraph">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="paragraph_2">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="paragraph_2g">
+		<type name="character varying" length="200"/>
+	</column>
+	<column name="effective_date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="responsibility_end_date">
+		<type name="date" length="0"/>
+	</column>
+</table>
+
+<table name="person_number" layers="0" collapse-mode="1" max-obj-count="12" z-value="0">
+	<schema name="capacities"/>
+	<role name="postgres"/>
+	<position x="2960" y="560"/>
+	<column name="id">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="id_ceaced">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="id_manager">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="pr_no">
+		<type name="character varying" length="0"/>
+	</column>
+</table>
+
+<table name="personal_information" layers="0" collapse-mode="1" max-obj-count="30" z-value="0">
+	<schema name="capacities"/>
+	<role name="postgres"/>
+	<position x="1700" y="980"/>
+	<column name="id">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="title">
+		<type name="character varying" length="10"/>
+	</column>
+	<column name="english_name_surname">
+		<type name="character varying" length="40"/>
+	</column>
+	<column name="english_name_forenames">
+		<type name="character varying" length="40"/>
+	</column>
+	<column name="chinese_name">
+		<type name="character varying" length="40"/>
+	</column>
+	<column name="chinese_commercial_code">
+		<type name="character varying" length="80"/>
+	</column>
+	<column name="aliases">
+		<type name="character varying" length="40"/>
+	</column>
+	<column name="former_names">
+		<type name="character varying" length="80"/>
+	</column>
+	<column name="gender">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="date_of_birth">
+		<type name="date" length="0"/>
+	</column>
+	<column name="place_of_birth">
+		<type name="character varying" length="3"/>
+	</column>
+	<column name="hkid">
+		<type name="character varying" length="9"/>
+	</column>
+	<column name="nationality">
+		<type name="character varying" length="3"/>
+	</column>
+	<column name="hk_perm_resident">
+		<type name="boolean" length="0"/>
+	</column>
+	<column name="passport_number">
+		<type name="character varying" length="9"/>
+	</column>
+	<column name="passport_date_of_expiry">
+		<type name="date" length="0"/>
+	</column>
+	<column name="passport_issuing_country_region">
+		<type name="character varying" length="3"/>
+	</column>
+	<column name="prc_resident_id">
+		<type name="character varying" length="18"/>
+	</column>
+	<column name="other_id_document">
+		<type name="character varying" length="100"/>
+	</column>
+</table>
+
+<table name="rei" layers="0" collapse-mode="1" max-obj-count="19" z-value="0">
+	<schema name="capacities"/>
+	<role name="postgres"/>
+	<position x="2000" y="980"/>
+	<column name="id">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="ai_no">
+		<type name="character varying" length="6"/>
+	</column>
+	<column name="type">
+		<type name="common.capacity_type" length="0"/>
+	</column>
+	<column name="id_person">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="id_personal_information">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="id_contact_information">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="regulated_activities">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="start_date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="end_date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="personal_ce_number">
+		<type name="character varying" length="6"/>
+	</column>
+</table>
+
+<table name="ais" layers="0" collapse-mode="1" max-obj-count="13" z-value="0">
+	<schema name="capacities"/>
+	<role name="postgres"/>
+	<position x="2220" y="980"/>
+	<column name="id">
+		<type name="text" length="0"/>
+	</column>
+	<column name="created_at" default-value="CURRENT_TIMESTAMP">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="100"/>
+	</column>
+	<column name="updated_at" default-value="CURRENT_TIMESTAMP">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="100"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="100"/>
+	</column>
+	<column name="ai_name">
+		<type name="character varying" length="255"/>
+	</column>
+	<column name="ai_no">
+		<type name="character varying" length="50"/>
+	</column>
+	<column name="ai_ce_number">
+		<type name="character varying" length="50"/>
+	</column>
+	<column name="address">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="STG_RI_REG_REC_EO" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="2320" y="5320"/>
+	<column name="id">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_regno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_aino">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_ainame">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_ra">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_role">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_startdate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_enddate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_ainame_chn">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="STG_RI_REG_REC_NEO" layers="0" collapse-mode="1" max-obj-count="10" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="2520" y="5320"/>
+	<column name="id">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_regno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_aino">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_ainame">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_ra">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_role">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_startdate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_enddate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_ainame_chn">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="STG_AI_OFFICERS_APPROVED" layers="0" collapse-mode="1" max-obj-count="66" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="1640" y="5980"/>
+	<column name="aio_co_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_off_pr_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_capacity">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_appoint_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_appoint_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_appoint_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_resign_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_resign_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_resign_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_app_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_app_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_app_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_user">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ai_officers_oid">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="status">
+		<type name="text" length="0"/>
+	</column>
+	<column name="version">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="chk_status">
+		<type name="text" length="0"/>
+	</column>
+	<column name="rec_status">
+		<type name="text" length="0"/>
+	</column>
+	<column name="lst_upd_maker">
+		<type name="text" length="0"/>
+	</column>
+	<column name="lst_upd_date">
+		<type name="text" length="0"/>
+	</column>
+	<column name="lst_upd_user">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_designation">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_office_tele">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_home_tele">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_portable">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_office_fax">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_home_fax">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_internet_adrl">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_secure_email">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_off_co_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_for_mobile_app">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_cl_issued">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_limit">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_alt_pr_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_pager">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_alt_co_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_withdrawal_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_withdrawal_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_withdrawal_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_office_tele_ext">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_cl_issue_date">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_cl_app_date">
+		<type name="text" length="0"/>
+	</column>
+	<column name="id">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_prtnr_inchg">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_personal_portable">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_personal_email">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="STG_AI_OFFICER_REVOKED" layers="0" collapse-mode="1" max-obj-count="66" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="1900" y="5980"/>
+	<column name="aio_co_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_off_pr_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_capacity">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_appoint_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_appoint_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_appoint_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_resign_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_resign_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_resign_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_app_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_app_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_app_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_user">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ai_officers_oid">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="status">
+		<type name="text" length="0"/>
+	</column>
+	<column name="version">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="chk_status">
+		<type name="text" length="0"/>
+	</column>
+	<column name="rec_status">
+		<type name="text" length="0"/>
+	</column>
+	<column name="lst_upd_maker">
+		<type name="text" length="0"/>
+	</column>
+	<column name="lst_upd_date">
+		<type name="text" length="0"/>
+	</column>
+	<column name="lst_upd_user">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_designation">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_office_tele">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_home_tele">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_portable">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_office_fax">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_home_fax">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_internet_adrl">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_secure_email">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_off_co_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_for_mobile_app">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_cl_issued">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_limit">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_alt_pr_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_pager">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_alt_co_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_withdrawal_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_withdrawal_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_withdrawal_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_office_tele_ext">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_cl_issue_date">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_cl_app_date">
+		<type name="text" length="0"/>
+	</column>
+	<column name="id">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_prtnr_inchg">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_personal_portable">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_personal_email">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="STG_AI_OFFICERS_RESPS_EFFECTIVE" layers="0" collapse-mode="1" max-obj-count="39" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="2140" y="5980"/>
+	<column name="aor_co_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_off_pr_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_capacity">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_eff_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_eff_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_eff_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_resp_chg_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_resp_chg_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_resp_chg_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_designation">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_country">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_is_employee">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_l_upd_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_l_upd_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_l_upd_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_l_upd_user">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_city">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_2g">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_2g_text">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_2c">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_2a">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_employer">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_7">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_8">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_2f">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_2d">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_2e">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_2b">
+		<type name="text" length="0"/>
+	</column>
+	<column name="id">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="STG_AI_OFFICER_RESPS_RESP_ENDED" layers="0" collapse-mode="1" max-obj-count="39" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="2440" y="5980"/>
+	<column name="aor_co_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_off_pr_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_capacity">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_eff_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_eff_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_eff_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_resp_chg_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_resp_chg_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_resp_chg_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_designation">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_country">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_is_employee">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_l_upd_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_l_upd_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_l_upd_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_l_upd_user">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_city">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_2g">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_2g_text">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_2c">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_2a">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_employer">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_7">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_8">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_2f">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_2d">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_2e">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aor_sched_2b">
+		<type name="text" length="0"/>
+	</column>
+	<column name="id">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="STG_LATEST_CE_FORM" layers="0" collapse-mode="1" max-obj-count="49" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="2760" y="5980"/>
+	<column name="unid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="access">
+		<type name="text" length="0"/>
+	</column>
+	<column name="content file">
+		<type name="text" length="0"/>
+	</column>
+	<column name="file list">
+		<type name="text" length="0"/>
+	</column>
+	<column name="personno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="salutation">
+		<type name="text" length="0"/>
+	</column>
+	<column name="surname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="forename">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chiname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="prevname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="birthdate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="birthplace">
+		<type name="text" length="0"/>
+	</column>
+	<column name="hkid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="nationality">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportissuecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportexpdate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chnresidcardno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="otheriddoc">
+		<type name="text" length="0"/>
+	</column>
+	<column name="businessphonecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="businessphoneno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="mobilecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="mobileno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="personmobilecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="personmobileno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="homephonecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="homephoneno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="businessfaxno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="homefaxno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="internetemail">
+		<type name="text" length="0"/>
+	</column>
+	<column name="personinternetemail">
+		<type name="text" length="0"/>
+	</column>
+	<column name="secureemail">
+		<type name="text" length="0"/>
+	</column>
+	<column name="address">
+		<type name="text" length="0"/>
+	</column>
+	<column name="addresscountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="officeaddress">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="epss_person_update_result_logs" layers="0" collapse-mode="1" max-obj-count="9" z-value="0">
+	<schema name="daas"/>
+	<role name="postgres"/>
+	<position x="560" y="4400"/>
+	<column name="upd_result_id" not-null="true">
+		<type name="character varying" length="50"/>
+	</column>
+	<column name="upd_result_created_time" not-null="true" default-value="CURRENT_TIMESTAMP">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="pr_no" not-null="true">
+		<type name="character varying" length="50"/>
+	</column>
+	<column name="licp_log_id" not-null="true">
+		<type name="character varying" length="50"/>
+	</column>
+	<column name="upd_result_status" not-null="true">
+		<type name="character varying" length="20"/>
+	</column>
+	<column name="upd_result_message">
+		<type name="text" length="0"/>
+	</column>
+	<column name="upd_result_retry_count" not-null="true" default-value="0">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="is_new_assigned" not-null="true" default-value="false">
+		<type name="boolean" length="0"/>
+	</column>
+	<constraint name="epss_person_update_result_logs_upd_result_status_check" type="ck-constr" table="daas.epss_person_update_result_logs">
+			<expression> <![CDATA[((upd_result_status)::text = ANY ((ARRAY['pending'::character varying, 'in_progress'::character varying, 'success'::character varying, 'failed'::character varying, 'retry'::character varying])::text[]))]]> </expression>
+	</constraint>
+</table>
+
+<table name="workflow_officer_chg_interface" layers="0" collapse-mode="1" max-obj-count="25" z-value="0">
+	<schema name="officers"/>
+	<role name="postgres"/>
+	<position x="1420" y="980"/>
+	<column name="submission_id" not-null="true">
+		<type name="character varying" length="255"/>
+	</column>
+	<column name="type">
+		<type name="character varying" length="255"/>
+	</column>
+	<column name="status">
+		<type name="character varying" length="255"/>
+	</column>
+	<column name="submission_data">
+		<type name="xml" length="0"/>
+	</column>
+	<column name="approval_date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="pr_no">
+		<type name="character varying" length="255"/>
+	</column>
+	<column name="hkma_registration_number">
+		<type name="character varying" length="255"/>
+	</column>
+	<column name="comfort_letter_issue_date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="comfort_letter_approved_date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="comfort_letter_issued">
+		<type name="boolean" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="255"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="255"/>
+	</column>
+	<column name="capacity_eng">
+		<type name="character varying" length="100"/>
+	</column>
+	<column name="capacity_chi">
+		<type name="character varying" length="300"/>
+	</column>
+	<column name="effective_date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="remove_date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="exam_grace_period_deadline">
+		<type name="date" length="0"/>
+	</column>
+	<column name="condition">
+		<type name="character varying" length="255"/>
+	</column>
+	<column name="condition_chinese">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="workflow_officer_chg_interface_pkey" type="pk-constr" table="officers.workflow_officer_chg_interface">
+		<columns names="submission_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="attachments" layers="0" collapse-mode="1" max-obj-count="15" z-value="0">
+	<schema name="attachments"/>
+	<role name="postgres"/>
+	<position x="1140" y="1460"/>
+	<column name="id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="file_name">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="data">
+		<type name="bytea" length="0"/>
+	</column>
+	<column name="size">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="content_type">
+		<type name="character varying" length="100"/>
+	</column>
+	<column name="description">
+		<type name="smallint" length="0"/>
+	</column>
+	<column name="old_id">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="attachments_pk" type="pk-constr" table="attachments.attachments">
 		<columns names="id" ref-type="src-columns"/>
 	</constraint>
-	<constraint name="eo_conditions_uq" type="uq-constr" table="officers.eo_conditions">
-		<columns names="id_eo" ref-type="src-columns"/>
+</table>
+
+<table name="tmp_attachments" layers="0" collapse-mode="1" max-obj-count="15" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="1640" y="6900"/>
+	<column name="id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="file_name">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="data">
+		<type name="bytea" length="0"/>
+	</column>
+	<column name="size">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="content_type">
+		<type name="character varying" length="100"/>
+	</column>
+	<column name="description">
+		<type name="smallint" length="0"/>
+	</column>
+	<column name="old_id">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="attachments_pk" type="pk-constr" table="data_migration.tmp_attachments">
+		<columns names="id" ref-type="src-columns"/>
 	</constraint>
+</table>
+
+<table name="droc_records" layers="0" collapse-mode="1" max-obj-count="20" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="1820" y="6900"/>
+	<column name="id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="hkma_registration_number">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="closed_date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="closed_mark">
+		<type name="boolean" length="0"/>
+	</column>
+	<column name="form_name">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="surname">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="forenames">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="hkid">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="passport_number">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="passport_issuing_country">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="old_id">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="droc_records_pk" type="pk-constr" table="data_migration.droc_records">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="droc_comments" layers="0" collapse-mode="1" max-obj-count="14" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="2080" y="6900"/>
+	<column name="id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="date_of_input">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="comment_desc">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="comment_attachment_filename">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="id_attachments">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="id_droc_records">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="droc_attachments_pk" type="pk-constr" table="data_migration.droc_comments">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="droc_discs" layers="0" collapse-mode="1" max-obj-count="22" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="2360" y="6900"/>
+	<column name="id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="date_of_input">
+		<type name="date" length="0"/>
+	</column>
+	<column name="source">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="date_of_action">
+		<type name="date" length="0"/>
+	</column>
+	<column name="action_taken">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="action_taken_chn">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="press_release_eng_filename">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="id_attachments_eng">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="press_release_chn_filename">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="id_attachments_chn">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="shown">
+		<type name="boolean" length="0"/>
+	</column>
+	<column name="remarks">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="id_droc_records">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="droc_discs_pk" type="pk-constr" table="data_migration.droc_discs">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="droc_records" layers="0" collapse-mode="1" max-obj-count="20" z-value="0">
+	<schema name="droc"/>
+	<role name="postgres"/>
+	<position x="840" y="4400"/>
+	<column name="id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="hkma_registration_number">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="closed_date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="closed_mark">
+		<type name="boolean" length="0"/>
+	</column>
+	<column name="form_name">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="surname">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="forenames">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="hkid">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="passport_number">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="passport_issuing_country">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="old_id">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="droc_records_pk" type="pk-constr" table="droc.droc_records">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="droc_comments" layers="0" collapse-mode="1" max-obj-count="14" z-value="0">
+	<schema name="droc"/>
+	<role name="postgres"/>
+	<position x="1100" y="4400"/>
+	<column name="id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="date_of_input">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="comment_desc">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="comment_attachment_filename">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="id_attachments">
+		<type name="character varying" length="0"/>
+		<comment> <![CDATA[attachment_id]]> </comment>
+	</column>
+	<column name="id_droc_records">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="droc_attachments_pk" type="pk-constr" table="droc.droc_comments">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="droc_discs" layers="0" collapse-mode="1" max-obj-count="22" z-value="0">
+	<schema name="droc"/>
+	<role name="postgres"/>
+	<position x="1360" y="4400"/>
+	<column name="id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="created_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="updated_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="deleted_at">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="deleted_by">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="date_of_input">
+		<type name="date" length="0"/>
+	</column>
+	<column name="source">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="date_of_action">
+		<type name="date" length="0"/>
+	</column>
+	<column name="action_taken">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="action_taken_chn">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="press_release_eng_filename">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="id_attachments_eng">
+		<type name="character varying" length="0"/>
+		<comment> <![CDATA[attachment_id]]> </comment>
+	</column>
+	<column name="press_release_chn_filename">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="id_attachments_chn">
+		<type name="character varying" length="0"/>
+		<comment> <![CDATA[attachment_id]]> </comment>
+	</column>
+	<column name="shown">
+		<type name="boolean" length="0"/>
+	</column>
+	<column name="remarks">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="id_droc_records">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="droc_discs_pk" type="pk-constr" table="droc.droc_discs">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="TMP_DROC" layers="0" collapse-mode="1" max-obj-count="176" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="2620" y="6900"/>
+	<column name="unid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="access">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="content file">
+		<type name="text" length="0"/>
+	</column>
+	<column name="file list">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ref_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="surname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="forenames">
+		<type name="text" length="0"/>
+	</column>
+	<column name="hkid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportissuecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="hkmaregistrationnumber">
+		<type name="text" length="0"/>
+	</column>
+	<column name="markdelete">
+		<type name="text" length="0"/>
+	</column>
+	<column name="preparedon">
+		<type name="text" length="0"/>
+	</column>
+	<column name="preparedby">
+		<type name="text" length="0"/>
+	</column>
+	<column name="closeddate">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="delete_remark">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="othercomment">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofinput_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_desc_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_attach_filename_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofinput_2">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="othercomment_desc_2">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="othercomment_attach_filename_2">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dateofinput_3">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="othercomment_desc_3">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="othercomment_attach_filename_3">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dateofinput_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_desc_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_attach_filename_4">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dateofinput_5">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="othercomment_desc_5">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="othercomment_attach_filename_5">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dr_dateofinput_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="source_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofaction_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_chn_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="shown_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_1">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dr_dateofinput_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="source_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofaction_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_chn_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="shown_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_2">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dr_dateofinput_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="source_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofaction_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_chn_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_3">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_3">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="shown_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_3">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dr_dateofinput_4">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="source_4">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dateofaction_4">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="action_taken_4">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="action_taken_chn_4">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_4">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_4">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="shown_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_4">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dr_dateofinput_5">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="source_5">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dateofaction_5">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="action_taken_5">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="action_taken_chn_5">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_5">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_5">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="shown_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_5">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dr_dateofinput_6">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="source_6">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dateofaction_6">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="action_taken_6">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="action_taken_chn_6">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_6">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_6">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="shown_6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_6">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dr_dateofinput_7">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="source_7">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dateofaction_7">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="action_taken_7">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="action_taken_chn_7">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_7">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_7">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="shown_7">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_7">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dr_dateofinput_8">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="source_8">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dateofaction_8">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="action_taken_8">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="action_taken_chn_8">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_8">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_8">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="shown_8">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_8">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dr_dateofinput_9">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="source_9">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dateofaction_9">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="action_taken_9">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="action_taken_chn_9">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_9">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_9">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="shown_9">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_9">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dr_dateofinput_10">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="source_10">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="dateofaction_10">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="action_taken_10">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="action_taken_chn_10">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_10">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_10">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="shown_10">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_10">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="othercomment_attachment_1">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="othercomment_attachment_2">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="othercomment_attachment_3">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="othercomment_attachment_4">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="othercomment_attachment_5">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_1">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_2">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_3">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_4">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_5">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_6">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_7">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_8">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_9">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_eng_10">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_1">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_2">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_3">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_4">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_5">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_6">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_7">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_8">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_9">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="pressrelease_chn_10">
+		<type name="double precision" length="0"/>
+	</column>
+</table>
+
+<table name="STG_DROC" layers="0" collapse-mode="1" max-obj-count="177" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="1640" y="9160"/>
+	<column name="unid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="access">
+		<type name="text" length="0"/>
+	</column>
+	<column name="content file">
+		<type name="text" length="0"/>
+	</column>
+	<column name="file list">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ref_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="surname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="forenames">
+		<type name="text" length="0"/>
+	</column>
+	<column name="hkid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportissuecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="hkmaregistrationnumber">
+		<type name="text" length="0"/>
+	</column>
+	<column name="markdelete">
+		<type name="text" length="0"/>
+	</column>
+	<column name="preparedon">
+		<type name="text" length="0"/>
+	</column>
+	<column name="preparedby">
+		<type name="text" length="0"/>
+	</column>
+	<column name="closeddate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="delete_remark">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofinput_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_desc_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_attach_filename_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofinput_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_desc_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_attach_filename_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofinput_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_desc_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_attach_filename_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofinput_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_desc_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_attach_filename_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofinput_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_desc_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_attach_filename_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_dateofinput_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="source_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofaction_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_chn_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="shown_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_dateofinput_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="source_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofaction_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_chn_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="shown_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_dateofinput_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="source_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofaction_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_chn_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="shown_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_dateofinput_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="source_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofaction_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_chn_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="shown_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_dateofinput_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="source_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofaction_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_chn_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="shown_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_dateofinput_6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="source_6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofaction_6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_chn_6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="shown_6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_dateofinput_7">
+		<type name="text" length="0"/>
+	</column>
+	<column name="source_7">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofaction_7">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_7">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_chn_7">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_7">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_7">
+		<type name="text" length="0"/>
+	</column>
+	<column name="shown_7">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_7">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_dateofinput_8">
+		<type name="text" length="0"/>
+	</column>
+	<column name="source_8">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofaction_8">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_8">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_chn_8">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_8">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_8">
+		<type name="text" length="0"/>
+	</column>
+	<column name="shown_8">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_8">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_dateofinput_9">
+		<type name="text" length="0"/>
+	</column>
+	<column name="source_9">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofaction_9">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_9">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_chn_9">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_9">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_9">
+		<type name="text" length="0"/>
+	</column>
+	<column name="shown_9">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_9">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_dateofinput_10">
+		<type name="text" length="0"/>
+	</column>
+	<column name="source_10">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dateofaction_10">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_10">
+		<type name="text" length="0"/>
+	</column>
+	<column name="action_taken_chn_10">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_filename_10">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_filename_10">
+		<type name="text" length="0"/>
+	</column>
+	<column name="shown_10">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dr_remarks_10">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_attachment_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_attachment_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_attachment_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_attachment_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="othercomment_attachment_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_7">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_8">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_9">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_eng_10">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_7">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_8">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_9">
+		<type name="text" length="0"/>
+	</column>
+	<column name="pressrelease_chn_10">
+		<type name="text" length="0"/>
+	</column>
+	<column name="id">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="TMP_CE_FORM" layers="0" collapse-mode="1" max-obj-count="49" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="1940" y="9160"/>
+	<column name="unid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="access">
+		<type name="text" length="0"/>
+	</column>
+	<column name="content file">
+		<type name="text" length="0"/>
+	</column>
+	<column name="file list">
+		<type name="text" length="0"/>
+	</column>
+	<column name="personno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="salutation">
+		<type name="text" length="0"/>
+	</column>
+	<column name="surname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="forename">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chiname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="prevname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="birthdate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="birthplace">
+		<type name="text" length="0"/>
+	</column>
+	<column name="hkid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="nationality">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportissuecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportexpdate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chnresidcardno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="otheriddoc">
+		<type name="text" length="0"/>
+	</column>
+	<column name="businessphonecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="businessphoneno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="mobilecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="mobileno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="personmobilecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="personmobileno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="homephonecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="homephoneno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="businessfaxno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="homefaxno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="internetemail">
+		<type name="text" length="0"/>
+	</column>
+	<column name="personinternetemail">
+		<type name="text" length="0"/>
+	</column>
+	<column name="secureemail">
+		<type name="text" length="0"/>
+	</column>
+	<column name="address">
+		<type name="text" length="0"/>
+	</column>
+	<column name="addresscountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="officeaddress">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="TMP_EO_FORM" layers="0" collapse-mode="1" max-obj-count="56" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="2160" y="9160"/>
+	<column name="unid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="access">
+		<type name="text" length="0"/>
+	</column>
+	<column name="content file">
+		<type name="text" length="0"/>
+	</column>
+	<column name="file list">
+		<type name="text" length="0"/>
+	</column>
+	<column name="lasthkmaregno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="surname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="forename">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chiname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chicomcode6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aliasname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="prevname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="gender">
+		<type name="text" length="0"/>
+	</column>
+	<column name="birthdate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="birthplace">
+		<type name="text" length="0"/>
+	</column>
+	<column name="hkid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="nationality">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportissuecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportexpdate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chnresidcardno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="otheriddoc">
+		<type name="text" length="0"/>
+	</column>
+	<column name="businessphoneno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="homephoneno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="mobileno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="businessfaxno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="homefaxno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="internetemail">
+		<type name="text" length="0"/>
+	</column>
+	<column name="personalemail">
+		<type name="text" length="0"/>
+	</column>
+	<column name="secureemail">
+		<type name="text" length="0"/>
+	</column>
+	<column name="address">
+		<type name="text" length="0"/>
+	</column>
+	<column name="addresscountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="officeaddress">
+		<type name="text" length="0"/>
+	</column>
+	<column name="multisuppfirm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="multisuppcountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="multisuppnaturebus">
+		<type name="text" length="0"/>
+	</column>
+	<column name="multisupprelationship">
+		<type name="text" length="0"/>
+	</column>
+	<column name="multisuppiscurrent">
+		<type name="text" length="0"/>
+	</column>
+	<column name="multisuppdatefrom">
+		<type name="text" length="0"/>
+	</column>
+	<column name="multisuppdateto">
+		<type name="text" length="0"/>
+	</column>
+	<column name="q_roleresponsedirectordetail">
+		<type name="text" length="0"/>
+	</column>
+	<column name="q_resolveconflictdirectordetail">
+		<type name="text" length="0"/>
+	</column>
+	<column name="q_timeallocatedirectordetail">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="TMP_MGR_FORM" layers="0" collapse-mode="1" max-obj-count="22" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="2440" y="9160"/>
+	<column name="unid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="access">
+		<type name="text" length="0"/>
+	</column>
+	<column name="content file">
+		<type name="text" length="0"/>
+	</column>
+	<column name="file list">
+		<type name="text" length="0"/>
+	</column>
+	<column name="personno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="salutation">
+		<type name="text" length="0"/>
+	</column>
+	<column name="surname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="forename">
+		<type name="text" length="0"/>
+	</column>
+	<column name="chiname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="hkid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportissuecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="passportexpdate">
+		<type name="text" length="0"/>
+	</column>
+	<column name="businessphonecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="businessphoneno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="mobilecountry">
+		<type name="text" length="0"/>
+	</column>
+	<column name="mobileno">
+		<type name="text" length="0"/>
+	</column>
+	<column name="internetemail">
+		<type name="text" length="0"/>
+	</column>
+	<column name="secureemail">
+		<type name="text" length="0"/>
+	</column>
+</table>
+
+<table name="temp_joined_source" layers="0" collapse-mode="1" max-obj-count="72" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="2660" y="9160"/>
+	<column name="aio_co_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_off_pr_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_capacity">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_appoint_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_appoint_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_appoint_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_resign_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_resign_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_resign_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_app_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_app_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_app_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_l_upd_user">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks1">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ai_officers_oid">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="status">
+		<type name="text" length="0"/>
+	</column>
+	<column name="version">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="chk_status">
+		<type name="text" length="0"/>
+	</column>
+	<column name="rec_status">
+		<type name="text" length="0"/>
+	</column>
+	<column name="lst_upd_maker">
+		<type name="text" length="0"/>
+	</column>
+	<column name="lst_upd_date">
+		<type name="text" length="0"/>
+	</column>
+	<column name="lst_upd_user">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_designation">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_office_tele">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_home_tele">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_portable">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_office_fax">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_home_fax">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_internet_adrl">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_secure_email">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_off_co_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_for_mobile_app">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_cl_issued">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_limit">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks3">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks4">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks5">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_remarks6">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_alt_pr_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_pager">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_alt_co_no">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_withdrawal_yyyy">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_withdrawal_dd">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_withdrawal_mm">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_office_tele_ext">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_cl_issue_date">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_cl_app_date">
+		<type name="text" length="0"/>
+	</column>
+	<column name="id">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_prtnr_inchg">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_personal_portable">
+		<type name="text" length="0"/>
+	</column>
+	<column name="aio_personal_email">
+		<type name="text" length="0"/>
+	</column>
+	<column name="id_ceaced">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="id_person">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="id_contact_information">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="id_ais">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="id_person_number">
+		<type name="uuid" length="0"/>
+	</column>
+</table>
+
+<table name="TMP_RI_DETAILS" layers="0" collapse-mode="1" max-obj-count="43" z-value="0">
+	<schema name="data_migration"/>
+	<role name="postgres"/>
+	<position x="1640" y="11440"/>
+	<column name="unid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="access">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="content file">
+		<type name="text" length="0"/>
+	</column>
+	<column name="file list">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="ri_hkma_regnum">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_removefromweb">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="islatestnumber">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_sname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_sname_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_oname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_oname_2">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_cname">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_hkid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_passport">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_dob">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_prev_hkma_regnum">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_whitelist">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_deemed_ra_1">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="ri_deemed_ra_2">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="ri_deemed_ra_4">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="ri_deemed_ra_5">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="ri_deemed_ra_6">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="ri_deemed_ra_7">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="ri_deemed_ra_9">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="ri_temp_engage_hist_start_dt">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_temp_engage_hist_end_dt">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ri_temp_engage_ai_code">
+		<type name="text" length="0"/>
+	</column>
+	<column name="ext_vet_result">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="sfc_oth_comments">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="sfc_action_dt">
+		<type name="text" length="0"/>
+	</column>
+	<column name="sfc_action_taken">
+		<type name="text" length="0"/>
+	</column>
+	<column name="sfc_press_release_eng">
+		<type name="text" length="0"/>
+	</column>
+	<column name="sfc_press_release_chi">
+		<type name="text" length="0"/>
+	</column>
+	<column name="sfc_vet_date_hkid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="sfc_vet_date_passport">
+		<type name="text" length="0"/>
+	</column>
+	<column name="issuspected">
+		<type name="text" length="0"/>
+	</column>
 </table>
 
 <relationship name="ceaced_inherits_capacities" type="relgen" layers="0"
 	 pk-pattern="{dt}_pk"
-	 custom-color="#4d4b17"
+	 custom-color="#722dfd"
 	 src-table="officers.ceaced"
 	 dst-table="officers.capacities"/>
 
 <relationship name="eo_inherits_capacities" type="relgen" layers="0"
 	 pk-pattern="{dt}_pk"
-	 custom-color="#67e9db"
+	 custom-color="#ae9e3b"
 	 src-table="officers.eo"
 	 dst-table="officers.capacities"/>
 
 <relationship name="manager_inherits_capacities" type="relgen" layers="0"
 	 pk-pattern="{dt}_pk"
-	 custom-color="#54a75d"
+	 custom-color="#2dd190"
 	 src-table="officers.manager"
 	 dst-table="officers.capacities"/>
 
 <relationship name="rei_inherits_capacities" type="relgen" layers="0"
 	 pk-pattern="{dt}_pk"
-	 custom-color="#1e1db7"
+	 custom-color="#a85639"
 	 src-table="officers.rei"
 	 dst-table="officers.capacities"/>
 
@@ -3807,16 +7527,6 @@ AI_OFFICER_RESPS - AOR_OFF_PR_NO]]> </comment>
 	<privileges select="true"/>
 </permission>
 <permission>
-	<object name="&quot;references&quot;.vetting_contact" type="table"/>
-	<roles names="postgres"/>
-	<privileges select="true" delete="true" insert="true" update="true" truncate="true" references="true" trigger="true"/>
-</permission>
-<permission>
-	<object name="&quot;references&quot;.vetting_contact" type="table"/>
-	<roles names="licp_ro_user"/>
-	<privileges select="true"/>
-</permission>
-<permission>
 	<object name="&quot;references&quot;.awc" type="table"/>
 	<roles names="postgres"/>
 	<privileges select="true" delete="true" insert="true" update="true" truncate="true" references="true" trigger="true"/>
@@ -3843,6 +7553,26 @@ AI_OFFICER_RESPS - AOR_OFF_PR_NO]]> </comment>
 </permission>
 <permission>
 	<object name="&quot;references&quot;.ri_reg_rec" type="table"/>
+	<roles names="licp_ro_user"/>
+	<privileges select="true"/>
+</permission>
+<permission>
+	<object name="&quot;references&quot;.vetting_contact" type="table"/>
+	<roles names="postgres"/>
+	<privileges select="true" delete="true" insert="true" update="true" truncate="true" references="true" trigger="true"/>
+</permission>
+<permission>
+	<object name="&quot;references&quot;.vetting_contact" type="table"/>
+	<roles names="licp_ro_user"/>
+	<privileges select="true"/>
+</permission>
+<permission>
+	<object name="daas.epss_person_update_result_logs" type="table"/>
+	<roles names="postgres"/>
+	<privileges select="true" delete="true" insert="true" update="true" truncate="true" references="true" trigger="true"/>
+</permission>
+<permission>
+	<object name="daas.epss_person_update_result_logs" type="table"/>
 	<roles names="licp_ro_user"/>
 	<privileges select="true"/>
 </permission>
